@@ -1,0 +1,14 @@
+name: " "
+output_dir: "docs"
+navbar:
+  title: "Unidad 3"
+  left:
+    - text: "Introducción a R"
+      href: recurso101.html
+    - text: "Paquetes en R"
+      href: recurso102.html
+    - text: "Documentos Rmd"
+      href: recurso103.html
+    - text: "Uso de tutoriales"
+      href: recurso104.html
+
