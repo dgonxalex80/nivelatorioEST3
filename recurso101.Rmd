@@ -91,7 +91,7 @@ A manera de instroducción a  continuación se relacionan algunas ayudas para la
 
 <br/><br/>
 
-## **vector**  
+### **vector**  
 
 Arreglo unidimensional de valores, caracteres o cadenas
 
@@ -108,7 +108,7 @@ y
 
 <br/><br/>
 
-## **matriz** 
+### **matriz** 
 
 Arreglo bidimensional de valores
 
@@ -119,7 +119,7 @@ m
 ```
 <br/><br/>
 
-## **arrays**  
+### **arrays**  
 
 Arreglos multimensionales de valores. 
 En el siguiente ejemplo se representa un arreglo de 3 matrices 3x3 que conformarian en 3D un cubo de datos
@@ -133,7 +133,7 @@ mn
 ```
 <br/><br/>
 
-## **factores** 
+### **factores** 
 
 Vector de variables categóricas, por lo general se utilizan para dividir una base en subgrupos  
 
@@ -147,7 +147,7 @@ y
 
 <br/><br/>
 
-## **listas** 
+### **listas** 
 
 Colección de objetos cada uno de tipos diferentes. El objeto de esta clase guarda valores en diferentes formatos. 
 
@@ -164,7 +164,7 @@ h$equidist
 ```
 <br/><br/>
 
-## **data.frames**
+### **data.frames**
 
 Estructura de datos de dos dimensiones - filas y columnas - base de datos. En este caso se puede obtener un fila (data[1,] o una columna (data[,1], por separado o un elemento de la data directamente data[20,2].
 
@@ -177,7 +177,7 @@ iris[1,5]
 ```
 <br/><br/>
 
-## **funciones**
+### **funciones**
 
 Para construir una función utilizamos la palabra *function*, entre parentesis los valores de entrada y entre corchetes la formula que conforma la función. Por ejemplo:
 
@@ -221,13 +221,13 @@ grafica(w,"#6495ED")  # evalua la funcion con w y color azul
 
 <br/><br/>
 
-## **ts**
+### **ts**
 
 Objeto para series de tiempo
 
 <br/><br/><br/>
 
-#  **Operadores en R**
+##  **Operadores en R**
 
 |      |Aritméticos         |      | Comparativos       |        | Lógicos     |
 |:----:|:-------------------|:----:|:-------------------|:------:|:------------|

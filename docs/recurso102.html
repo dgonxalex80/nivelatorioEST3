@@ -12,7 +12,7 @@
 <meta name="author" content="Nivelatorio de Estadística" />
 
 
-<title>Manejo de paquetes en R</title>
+<title> Manejo de paquetes en R</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -264,7 +264,8 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Manejo de paquetes en R</h1>
+<h1 class="title toc-ignore"><span style="color:#034a94"> <strong>Manejo
+de paquetes en R</strong></span></h1>
 <h4 class="author">Nivelatorio de Estadística</h4>
 
 </div>
@@ -281,31 +282,28 @@ de paquetes para ser utiliadas de manera inmediata. A este primer
 conjunto se llama <strong>base</strong> y permite dar respuesta a
 problemas básicos. Sin embargo en algunos casos es necesario instalar
 paquetes adicionales, los cuales iremos anunciando en la medida que sean
-necesario.</p>
+necesario. (<a
+href="https://gallery.shinyapps.io/087-crandash/">paquetes más populares
+CRAN</a>)</p>
 <p>La instalación de paquetes se puede hacer de dos formas :</p>
 <p><br/><br/></p>
 <div
-id="utilizando-la-vengtana-packages-ubicada-en-la-parte-inferior-derecha-de-rstudio"
+id="utilizando-la-venatana-packages-ubicada-en-la-parte-inferior-derecha-de-rstudio"
 class="section level4">
-<h4>1. Utilizando la vengtana <strong>Packages</strong> ubicada en la
+<h4>1. Utilizando la venatana <strong>Packages</strong> ubicada en la
 parte inferior derecha de RStudio</h4>
-<p><img src="img/install_package1.png" width="80%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="img/install_package1.png" width="60%" style="display: block; margin: auto auto auto 0;" /></p>
 <p><br/><br/></p>
 </div>
-<div id="digitando-en-la-consola-la-función-install.packages"
-class="section level4">
-<h4>2. Digitando en la consola la función
-<code>install.packages()</code></h4>
-<p><br/></p>
-<div id="directamente-de-los-repositorios-de-r" class="section level5">
-<h5>Directamente de los repositorios de R</h5>
-<p><br/></p>
-<pre class="r"><code>install.packages(&quot;ggplot2&quot;)</code></pre>
-<p><br/></p>
-</div>
+<div id="digitando-en-la-consola" class="section level4">
+<h4>2. Digitando en la consola</h4>
+<p><img src="img/install1.png" width="50%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><br/><br/></p>
 <div id="desde-un-repositorio-en-github" class="section level5">
 <h5>Desde un repositorio en GitHub</h5>
-<pre class="r"><code>devtools::install_github(&quot;dgonxalex80/paqueteDEG&quot;)</code></pre>
+<p>Se puede descargar un paquete construido de manera particular y
+almacenado en github utilizando el paquete <code>devtools</code></p>
+<pre class="r"><code>devtools::install_github(&quot;dgonxalex80/paqueteNIV&quot;)</code></pre>
 <p><br/><br/></p>
 </div>
 </div>
@@ -326,25 +324,58 @@ class="section level3">
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">tidyverse</td>
 <td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">* ggplot2</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">* tibble</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">* tidyr</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">* readr</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">* purrr</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">* dplyr</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">* stringr</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">* forcats</td>
 <td align="left"></td>
 </tr>
 </tbody>
 </table>
+<div class="line-block"></div>
 <p><br/><br/></p>
 <p><a href="https://gallery.shinyapps.io/087-crandash/">Tablero Paquetes
 RStudio descargados</a></p>
 <p><br/><br/></p>
 </div>
-</div>
-<div id="ventana-help" class="section level1">
-<h1>Ventana <strong>Help</strong></h1>
+<div id="ventana-help" class="section level2">
+<h2><strong>Ventana Help</strong></h2>
 <p>La función <code>help()</code> permite la visualización de las ayudas
 relacionadas con una función en la ventana Help que permite visualizar
 la sintaxis de las funciones. En el siguiente ejemplo la función
 help(“install.packages”) permite visualizar los parámetros de la
 función</p>
 <pre class="r"><code>help(&quot;sum&quot;)</code></pre>
+</div>
 </div>
 
 

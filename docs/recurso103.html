@@ -13,7 +13,7 @@
 
 <meta name="date" content="2022-01-01" />
 
-<title>Documentos Markdown</title>
+<title> Documentos Rmarkdown</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -265,14 +265,103 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Documentos Markdown</h1>
+<h1 class="title toc-ignore"><span style="color:#034a94">
+<strong>Documentos Rmarkdown</strong></span></h1>
 <h4 class="author">Nivelatorio de Estadística</h4>
 <h4 class="date">2022</h4>
 
 </div>
 
 
-
+<p>Una de las actividades principales al desarrollar proyectos en
+Ciencia de Datos ademas de los procesos de recolección y ajuste de datos
+y modelación consiste en poder comunicar de manera adecuada los
+resultados. Para ellos existen muchas posibilidades como pueden ser :
+articulos, libros, sitios web, posters, presentaciones y blogs entre
+otros</p>
+<p>Normalmente los procesos de importar, ajuste de los datos, la
+modelación, la representación gráfica se hace en programas diferentes a
+los que se utilizan para su publicación generando mas tiempo en en el
+proceso de comunicación pero haciendo popular el Ctrl+C , Ctrl+V</p>
+<p><img src="img/ctrlCV.png" width="10%" style="display: block; margin: auto;" /></p>
+<p><img src="img/Rmd.jpeg" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
+<p>El paquete rmarkdown junto a otros como : <code>knitr</code>,
+<code>bookdown</code>, <code>xaringan</code>, <code>blogdown</code>,
+entre otros permiten la construcción de documentos para comunicar los
+resultados obtenidos en un proceso</p>
+<p><img src="img/rmarkdown_universe.jpg" width="100%" style="display: block; margin: auto;" />
+<br/><br/></p>
+<div id="formatos-rmd" class="section level2">
+<h2><strong>Formatos Rmd</strong></h2>
+<p>Para asceder a una plantilla Rmd ingresamos por :</p>
+<p><br/></p>
+<p>File / New File / R Marckdown …</p>
+<p><img src="img/Rmd1.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><br/></p>
+<p>Se nos depliega una ventana donde podemos colocar el nombre del
+documento</p>
+<p><img src="img/Rmd2.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><br/></p>
+<p>En esta ventana se no indica que la salida puede estar en formato y
+sus respectivos requerimientos:</p>
+<ul>
+<li>HTML</li>
+<li>PDF<br />
+</li>
+<li>Word</li>
+</ul>
+<p>Ademas de estos documentos existen plantillas que se activan al
+instalar paquetes como :</p>
+<ul>
+<li>xarimgan que permiote crear presentaciones</li>
+<li>bookdown para crear libros</li>
+</ul>
+<p>Es recomendable crar un proyecto al inicio con el fin de que todos
+los codigos, imagenes y demas archivos queden asociados a una carpeta de
+tal forma que esten disponibles cuando se active el proyecto</p>
+<p><img src="img/Project1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Presentando tres opciones:</p>
+<ul>
+<li><p><strong>New Directory</strong> : Creamos un nuevo proyecto para
+lo cual temos varias plantillas</p></li>
+<li><p><strong>Existing Directory</strong> : Cuando tenemos un
+directorio ya creado y queremos ubicar nuestro proyecto en el</p></li>
+<li><p><strong>Version Control</strong> : esta opción se utiliza cuando
+queremos clonar un repositorio previamente creado en GitHub</p></li>
+</ul>
+<p><br/><br/></p>
+<p><br/></p>
+</div>
+<div id="sintaxis-rmd" class="section level2">
+<h2><strong>Sintaxis Rmd</strong></h2>
+<p><br/><br/></p>
+<p>Los archivos creados a partir de la secuencia :
+<code>File / New File / R Marckdown ...</code> presenta una plantilla
+que ayuda a entender la sintaxis empleada en Rmd, la cual se puede
+mezclar con otros lenguajes como : <code>LaTeX</code>,
+<code>HTML</code></p>
+<p><a href="https://rmarkdown.rstudio.com/lesson-15.HTML">R
+Markdown::HOJA RESUMEN</a></p>
+<p><br/><br/></p>
+</div>
+<div id="plantilla-para-libro" class="section level2">
+<h2><strong>Plantilla para libro</strong></h2>
+<p>Es facil construir un libro en Rmd : File / New Project.. / New
+Directory / Book project using bookdown</p>
+<p><img src="img/book1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>El proceso anterior crea un nuevo proyecto llamado
+<strong>Libro</strong> que contiene varios archivos</p>
+<p><img src="img/book2.png" width="100%" style="display: block; margin: auto;" />
+Para procesar el libro convirtiendolo en formato HTML o pdf se utiliza
+el boton Build Book ubicado en la ventana Build</p>
+<p><img src="img/book3.png" width="60%" style="display: block; margin: auto;" /></p>
+<p>Los cambios que se generen en los archivos de la plantilla quedarán
+realizados en el libro</p>
+<p><br/><br/></p>
+<p><strong>Ejemplo</strong></p>
+<p><a href="https://www.bigbookofr.com/index.html"><strong>Big Book of
+R</strong></a></p>
+</div>
 
 
 

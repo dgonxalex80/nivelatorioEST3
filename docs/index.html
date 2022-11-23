@@ -13,7 +13,7 @@
 
 <meta name="date" content="2022-01-01" />
 
-<title>Introducción a R</title>
+<title> Introducción a R</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -265,7 +265,8 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Introducción a R</h1>
+<h1 class="title toc-ignore"><span style="color:#034a94">
+<strong>Introducción a R</strong></span></h1>
 <h4 class="author">Nivelatorio de Estadística</h4>
 <h4 class="date">2022</h4>
 
@@ -292,9 +293,13 @@ para el anaisis de datos y gráficos</a></p></li>
 <li><p>Lenguaje multiparadigma</p></li>
 <li><p>Codigo construido en C y Fortran</p></li>
 <li><p>Gran comunidad muy activa</p></li>
-<li><p>Mas de 7000 librerias o packages que en su gran mayoria estan
-almacenadas en <a
-href="https://cran.r-project.org/web/packages/available_packages_by_name.html">CRAN</a></p></li>
+<li><p>Gran cantidad de librerias o packages (más de 18000) en su gran
+mayoria estan almacenadas en <a
+href="https://cran.r-project.org/web/packages/available_packages_by_name.html">CRAN</a>,
+<a
+href="https://bioconductor.org/packages/release/BiocViews.html#___Software">Biocondictor</a>,
+y otras almacenadeas en github durante su proceso de construcción y
+ajustes</p></li>
 </ul>
 <p><br/><br/></p>
 <p><img src="img/Rt.png" width="70%" style="display: block; margin: auto;" /></p>
@@ -334,13 +339,17 @@ instalación :</p>
 <li><p><a href="https://rstudio.com/products/rstudio/download/">RStudio
 download</a></p></li>
 </ul>
-<p>Nota: Antes de instalar RStudio se recomienda instalar los siguientes
-programas</p>
+<p><strong>Nota</strong>: Antes de instalar RStudio se recomienda
+instalar los siguientes programas</p>
 <ul>
 <li>git</li>
 <li>Miktex o Texlife dependiendo el sistema operativo</li>
-<li>un visor de pdf</li>
+<li>un visor de pdf en caso de no tenerlos</li>
+<li>Python</li>
 </ul>
+<p>Estos programas se insertan dentro de la configuración inicial al
+instalar posteriormente RStudio y serán de gran utilidad al procesar
+informes mediantes archivos Rmd</p>
 <p><br/></p>
 <p>R cuenta con una ventana de ayudas que permite revisar las sintaxis y
 detalles de sus parámetros, al igual que ejemplos y artículos
@@ -353,18 +362,76 @@ Help (#7 de la imagen) o desde la linea de la Consola:</p>
 para la iniciación del lenguaje :</p>
 <p><br/><br/><br/></p>
 </div>
-<div id="tipos-de-datos-en-r" class="section level1">
-<h1><strong>Tipos de datos en R</strong></h1>
+<div id="tipos-de-objetos-en-r" class="section level1">
+<h1><strong>Tipos de objetos en R</strong></h1>
 <p><br/><br/></p>
+<table>
+<colgroup>
+<col width="12%" />
+<col width="46%" />
+<col width="41%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Objeto</th>
+<th align="left">tipos</th>
+<th align="left">se permite varios tipos en mismo objeto ?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">vector</td>
+<td align="left">numéricos, caracter, complejo, lógico</td>
+<td align="left">No</td>
+</tr>
+<tr class="even">
+<td align="left">factor</td>
+<td align="left">numérico, caracter</td>
+<td align="left">No</td>
+</tr>
+<tr class="odd">
+<td align="left">arreglo</td>
+<td align="left">numéricos, caracter, complejo, lógico</td>
+<td align="left">No</td>
+</tr>
+<tr class="even">
+<td align="left">matriz</td>
+<td align="left">numéricos, caracter, complejo, lógico</td>
+<td align="left">No</td>
+</tr>
+<tr class="odd">
+<td align="left">data.frame</td>
+<td align="left">numéricos, caracter, complejo, lógico</td>
+<td align="left">Si</td>
+</tr>
+<tr class="even">
+<td align="left">ts</td>
+<td align="left">numéricos, caracter, complejo, lógico</td>
+<td align="left">Si</td>
+</tr>
+<tr class="odd">
+<td align="left">lista</td>
+<td align="left">numéricos, caracter, complejo, lógico, función,
+expresión</td>
+<td align="left">Si</td>
+</tr>
+</tbody>
+</table>
+<p>Tomado de: <a
+href="https://bookdown.org/jboscomendoza/r-principiantes4/">R para
+principiantes</a></p>
+<p>A continuación se presentan algunos ejemplos de objetos</p>
 <div id="vector" class="section level2">
 <h2><strong>vector</strong></h2>
 <p>Arreglo unidimensional de valores, caracteres o cadenas</p>
 <pre class="r"><code>x=c(1,2,3,4,5)         #&lt;&lt;
-x</code></pre>
-<pre><code>## [1] 1 2 3 4 5</code></pre>
+
+class(x)</code></pre>
+<pre><code>[1] &quot;numeric&quot;</code></pre>
 <pre class="r"><code>y=c(&quot;Muy regular&quot;, &quot;Regular&quot;, &quot;Bueno&quot;, &quot;Muy bueno&quot;, &quot;Excelente&quot;)
-y</code></pre>
-<pre><code>## [1] &quot;Muy regular&quot; &quot;Regular&quot;     &quot;Bueno&quot;       &quot;Muy bueno&quot;   &quot;Excelente&quot;</code></pre>
+
+class(y)</code></pre>
+<pre><code>[1] &quot;character&quot;</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="matriz" class="section level2">
@@ -372,11 +439,9 @@ y</code></pre>
 <p>Arreglo bidimensional de valores</p>
 <pre class="r"><code>x=1:9
 m=matrix(x,nrow=3)   #&lt;&lt;
-m</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    4    7
-## [2,]    2    5    8
-## [3,]    3    6    9</code></pre>
+
+class(m)</code></pre>
+<pre><code>[1] &quot;matrix&quot; &quot;array&quot; </code></pre>
 <p><br/><br/></p>
 </div>
 <div id="arrays" class="section level2">
@@ -388,27 +453,9 @@ de datos</p>
 y=10:18
 z=19:27
 mn=array(c(x,y),dim=c(3,3,3)) #&lt;&lt;
-mn</code></pre>
-<pre><code>## , , 1
-## 
-##      [,1] [,2] [,3]
-## [1,]    1    4    7
-## [2,]    2    5    8
-## [3,]    3    6    9
-## 
-## , , 2
-## 
-##      [,1] [,2] [,3]
-## [1,]   10   13   16
-## [2,]   11   14   17
-## [3,]   12   15   18
-## 
-## , , 3
-## 
-##      [,1] [,2] [,3]
-## [1,]    1    4    7
-## [2,]    2    5    8
-## [3,]    3    6    9</code></pre>
+
+class(mn)</code></pre>
+<pre><code>[1] &quot;array&quot;</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="factores" class="section level2">
@@ -417,11 +464,10 @@ mn</code></pre>
 dividir una base en subgrupos</p>
 <pre class="r"><code>x=c(&quot;rojo&quot;, &quot;verde&quot;, &quot;azul&quot;)
 y=rep(x, times=4)
-x</code></pre>
-<pre><code>## [1] &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot;</code></pre>
-<pre class="r"><code>y</code></pre>
-<pre><code>##  [1] &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot;  &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot;  &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot; 
-## [10] &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot;</code></pre>
+y=as.factor(y)
+
+class(y)</code></pre>
+<pre><code>[1] &quot;factor&quot;</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="listas" class="section level2">
@@ -432,12 +478,8 @@ clase guarda valores en diferentes formatos.</p>
 contiene varios elementos dentro de si, todos relacionados con un
 histograma</p>
 <pre class="r"><code>h=hist(rnorm(100,25,10)) #&lt;&lt;
-h$breaks
-h$counts
-h$density
-h$mids
-h$xname
-h$equidist</code></pre>
+
+class(h)</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="data.frames" class="section level2">
@@ -447,9 +489,9 @@ datos. En este caso se puede obtener un fila (data[1,] o una columna
 (data[,1], por separado o un elemento de la data directamente
 data[20,2].</p>
 <pre class="r"><code>data(iris) #&lt;&lt;
-head(iris)
-iris[1,]
-iris[1,5]</code></pre>
+
+class(iris)</code></pre>
+<pre><code>[1] &quot;data.frame&quot;</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="funciones" class="section level2">
@@ -460,11 +502,13 @@ conforma la función. Por ejemplo:</p>
 <p><span class="math display">\[f(x)=\dfrac{1}{(x-1)^{2}} \]</span></p>
 <pre class="r"><code>fx=function(x){1/(x-1)^2} #&lt;&lt;
 fx(100) # funcion evaluada en x=100</code></pre>
-<pre><code>## [1] 0.0001020304</code></pre>
+<pre><code>[1] 0.0001020304</code></pre>
+<pre class="r"><code>class(fx)</code></pre>
+<pre><code>[1] &quot;function&quot;</code></pre>
 <p>En este caso la función es evaluada dentro de un otra función en la
 construcción de un gráfico</p>
 <pre class="r"><code>x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
-plot(x, fx(x), type=&quot;l&quot;, col=&quot;red&quot;) # genera grafica</code></pre>
+plot(x, fx(x), type=&quot;l&quot;, col=&quot;#FF7F00&quot;, lwd = 5, las=1) # genera grafica</code></pre>
 <p><img src="index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>El siguiente ejemplo construye una función para la realización de un
 gráfico. En este caso los valores de entrada estan conformados por un
@@ -474,14 +518,13 @@ vector de datos y un color</p>
 grafica=function(x,color){
         barplot(x,
                 col=color, las=1)
-        grid()
 }
 
 z=table(y) # generacion de tabla de datos
-grafica(z,&quot;red&quot;)  # evalua la funcion en los datos z y colo rojo</code></pre>
+grafica(z,&quot;#034A94&quot;)  # evalua la funcion en los datos z y colo rojo</code></pre>
 <p><img src="index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <pre class="r"><code>w=round(prop.table(z)*100,2)  # genera datos y constuye tabla en porcentaje
-grafica(w,&quot;#6495ED&quot;)  # evalua la funcion con w y color azul</code></pre>
+grafica(w,&quot;#0EB0C6&quot;)  # evalua la funcion con w y color azul</code></pre>
 <p><img src="index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p><a href="https://r-charts.com/es/colores/">R CHARTS: colores en
 R</a></p>
@@ -491,6 +534,11 @@ R</a></p>
 <h2><strong>ts</strong></h2>
 <p>Los objetos ts corresponde a series temporales que estan cupuestos
 por un inicio, un final y una periodicidad temporal regular</p>
+<pre class="r"><code>x=rnorm(365, 20,3)
+temperatura=ts(x,freq=12,start=c(1981,1))
+
+class(temperatura)</code></pre>
+<pre><code>[1] &quot;ts&quot;</code></pre>
 <p>Objeto para series de tiempo</p>
 <p><br/><br/><br/></p>
 </div>
@@ -575,6 +623,9 @@ por un inicio, un final y una periodicidad temporal regular</p>
 </tr>
 </tbody>
 </table>
+<p>Tomado de : <a
+href="https://bookdown.org/jboscomendoza/r-principiantes4/">R para
+principiantes</a></p>
 </div>
 
 
