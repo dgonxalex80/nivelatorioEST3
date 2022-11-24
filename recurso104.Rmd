@@ -1,7 +1,6 @@
 ---
 title: <span style="color:#034a94"> **Uso de tutoriales**</span>
-author: "dgonzalez80"
-date: "2022-11-10"
+author: "Nivelatorio de Estadística"
 output: html_document
 ---
 
@@ -25,9 +24,9 @@ Durante los cursos:
 
 <br/>
 
-Se utilizarán tutoriales que permitiran poner a prueba tus conocimientos
+Se utilizarán tutoriales que permitiran poner a prueba tus conocimientos, por lo que es importante poder estar familiarizados con su carga y activación.
 
-Es importante poder estar familiarizados con su carga y activación
+
 
 <br/><br/>
 
@@ -37,11 +36,27 @@ Es importante poder estar familiarizados con su carga y activación
 
 Para activar los tutoriales en R se requiere tener instalados  y activados los siguientes paquetes: 
 
-* learnr   : `install.packages("learnr")` 
+* instalar el paquete learnr   : `install.packages("learnr")` 
 
-* devtools : `install.packages("devtools")` 
+* instalar el paquete devtools : `install.packages("devtools")` 
 
-* paqueteNIV : `devtools::install_github("dgonxalex80/paqueteNIV")`
+* instalar el paquete paqueteNIV : `devtools::install_github("dgonxalex80/paqueteNIV")`
 
+* activar el tutorial : `learnr::run_tutorial("tutorialU101", "paqueteNIV")`
 
 <br/><br/>
+
+El siguiente código resumen las instrucciones necesarias para cargar el primer tutorial (tutorialU101)
+
+```{r, eval=FALSE}
+install.packages("learnr") # solo una vez
+install.packages("devtools") # solo una vez
+devtools::install_github("dgonxalex80/paqueteNIV")
+learnr::run_tutorial("tutorialU101", "paqueteNIV")
+```
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/Rmd5.png")
+```
+

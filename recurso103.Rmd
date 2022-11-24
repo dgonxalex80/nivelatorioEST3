@@ -1,7 +1,6 @@
 ---
 title: <span style="color:#034a94"> **Documentos Rmarkdown**</span>
 author: "Nivelatorio de Estadística"
-date: "2022"
 output: html_document
 ---
 
@@ -94,8 +93,18 @@ Los archivos creados a partir de la secuencia : `File / New File / R Marckdown .
 
 [R Markdown::HOJA RESUMEN](https://rmarkdown.rstudio.com/lesson-15.HTML)
 
+El lenguaje [Markdown](https://en.wikipedia.org/wiki/Markdown) es incorporado en RStudio mediante archivos .Rmd  y permite la escritura HTML, TeX. Tambien permite la creación de bloques intermedios donde se procesa código de : [R](https://www.r-project.org/), [Bash](https://es.wikipedia.org/wiki/Bash), [D3.js](https://en.wikipedia.org/wiki/D3.js), [Python](https://www.python.org/), [Rcpp](https://www.rcpp.org/),
+[SQL](https://es.wikipedia.org/wiki/SQL) y [Stan](https://mc-stan.org/)
 
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center"}
+knitr::include_graphics("img/Rmd4.png")
+```
 <br/><br/>
+
+
+
+
 
 ## **Plantilla para libro**
 
@@ -108,16 +117,19 @@ knitr::include_graphics("img/book1.png")
 
 El proceso anterior crea un nuevo proyecto llamado **Libro** que contiene varios archivos
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/book2.png")
+```{r, echo=FALSE, out.width="60%", fig.align = "center"}
+knitr::include_graphics("img/libro1.png")
 ```
 Para procesar el libro convirtiendolo en formato HTML o pdf se utiliza el boton Build Book ubicado en la ventana Build
 
-```{r, echo=FALSE, out.width="60%", fig.align = "center"}
-knitr::include_graphics("img/book3.png")
+
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+knitr::include_graphics("img/libro2.png")
 ```
 
 Los cambios que se generen en los archivos de la plantilla quedarán realizados en el libro
+
+
 
 <br/><br/>
 
