@@ -101,15 +101,14 @@ R cuenta con una ventana de ayudas que permite revisar las sintaxis y detalles d
 
 Para asceder a las ayudas se puede consultar directamente en la venta Help (#7 de la imagen) o desde la linea de la Consola:
 
-```{r}
+<pre>
 help("lm")
+</pre>
 
-```
 
-
-```{r}
+<pre>
 ?"lm"
-```
+</pre>
 
 
 

@@ -354,8 +354,12 @@ detalles de sus parámetros, al igual que ejemplos y artículos
 relacionados con las funciones consultadas</p>
 <p>Para asceder a las ayudas se puede consultar directamente en la venta
 Help (#7 de la imagen) o desde la linea de la Consola:</p>
-<pre class="r"><code>help(&quot;lm&quot;)</code></pre>
-<pre class="r"><code>?&quot;lm&quot;</code></pre>
+<pre>
+help("lm")
+</pre>
+<pre>
+?"lm"
+</pre>
 <p>A manera de instroducción a continuación se relacionan algunas ayudas
 para la iniciación del lenguaje :</p>
 <p><br/><br/><br/></p>
@@ -507,7 +511,7 @@ fx(100) # funcion evaluada en x=100</code></pre>
 construcción de un gráfico</p>
 <pre class="r"><code>x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
 plot(x, fx(x), type=&quot;l&quot;, col=&quot;#FF7F00&quot;, lwd = 5, las=1) # genera grafica</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p>El siguiente ejemplo construye una función para la realización de un
 gráfico. En este caso los valores de entrada estan conformados por un
 vector de datos y un color</p>
@@ -520,10 +524,10 @@ grafica=function(x,color){
 
 z=table(y) # generacion de tabla de datos
 grafica(z,&quot;#034A94&quot;)  # evalua la funcion en los datos z y colo rojo</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <pre class="r"><code>w=round(prop.table(z)*100,2)  # genera datos y constuye tabla en porcentaje
 grafica(w,&quot;#0EB0C6&quot;)  # evalua la funcion con w y color azul</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p><a href="https://r-charts.com/es/colores/">R CHARTS: colores en
 R</a></p>
 <p><br/><br/></p>

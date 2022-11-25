@@ -48,12 +48,12 @@ Para activar los tutoriales en R se requiere tener instalados  y activados los s
 
 El siguiente código resumen las instrucciones necesarias para cargar el primer tutorial (tutorialU101)
 
-```{r, eval=FALSE}
-install.packages("learnr") # solo una vez
-install.packages("devtools") # solo una vez
-devtools::install_github("dgonxalex80/paqueteNIV")
-learnr::run_tutorial("tutorialU101", "paqueteNIV")
-```
+<pre>
+install.packages("learnr")                           # solo una vez
+install.packages("devtools")                         # solo una vez
+devtools::install_github("dgonxalex80/paqueteNIV")   # descarga paquete nivelatorioEST
+learnr::run_tutorial("tutorialU101", "paqueteNIV")   # carga tutorialU101
+</pre>
 
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}

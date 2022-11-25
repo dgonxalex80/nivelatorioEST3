@@ -303,10 +303,12 @@ activados los siguientes paquetes:</p>
 <p><br/><br/></p>
 <p>El siguiente código resumen las instrucciones necesarias para cargar
 el primer tutorial (tutorialU101)</p>
-<pre class="r"><code>install.packages(&quot;learnr&quot;) # solo una vez
-install.packages(&quot;devtools&quot;) # solo una vez
-devtools::install_github(&quot;dgonxalex80/paqueteNIV&quot;)
-learnr::run_tutorial(&quot;tutorialU101&quot;, &quot;paqueteNIV&quot;)</code></pre>
+<pre>
+install.packages("learnr")                           # solo una vez
+install.packages("devtools")                         # solo una vez
+devtools::install_github("dgonxalex80/paqueteNIV")   # descarga paquete nivelatorioEST
+learnr::run_tutorial("tutorialU101", "paqueteNIV")   # carga tutorialU101
+</pre>
 <p><img src="img/Rmd5.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 
