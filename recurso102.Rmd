@@ -75,12 +75,17 @@ devtools::install_github("dgonxalex80/paqueteNIV")
 | lubridate         | fechas y tiempos
 | hms               | tiempo en horas, minutos, segundos
 | blob              | binarios
-
+|summarytools       ||
+|psych       ||
+|agricolae||
+|devtools ||
+|learnr       ||
+|bookdown||
+|xaringan||
+|rmarkdown||
+|paqueteNIV       ||
 
 <br/><br/>
-
-
-[Tablero Paquetes RStudio descargados](https://gallery.shinyapps.io/087-crandash/)
 
 
 <br/><br/>
