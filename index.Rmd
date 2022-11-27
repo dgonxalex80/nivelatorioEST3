@@ -261,12 +261,10 @@ $$f(x)=\dfrac{1}{(x-1)^{2}}$$
 <pre>
 fx=function(x){1/(x-1)^2} # <<-
 fx(100)                   # función evaluada en x=100
+
+[1] 0.0001020304
 </pre>
 
-```{r, echo=FALSE}
-fx=function(x){1/(x-1)^2} #<<
-fx(100)                   # funcion evaluada en x=100
-```
 
 En este caso la función es evaluada dentro de un otra función en la construcción de un gráfico
 
@@ -276,6 +274,7 @@ plot(x, fx(x), type="l", col="#FF7F00", lwd = 5, las=1) # genera grafica
 </pre>
 
 ```{r tidy=FALSE, echo=FALSE}
+fx=function(x){1/(x-1)^2} 
 x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
 plot(x, fx(x), type="l", col="#FF7F00", lwd = 5, las=1) # genera grafica
 ```
@@ -318,13 +317,11 @@ grafica(w,"#0EB0C6")  # evalua la funcion con w y color azul
 ```
 
 
-[R CHARTS: colores en R](https://r-charts.com/es/colores/)
-
 <br/><br/>
 
 ## **ts**
 
-Los objetos ts corresponde a series temporales que estan cupuestos por un inicio, un final y una periodicidad temporal regular
+Los objetos `ts` corresponde a series temporales que estan cupuestos por un inicio, un final y una periodicidad temporal regular
 
 <pre>
 x=rnorm(365, 20,3)
@@ -336,8 +333,6 @@ x=rnorm(365, 20,3)
 temperatura=ts(x,freq=12,start=c(1981,1))  # <<-
 ```
 
-
-Objeto para series de tiempo
 
 <br/><br/><br/>
 

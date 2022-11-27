@@ -61,17 +61,22 @@ devtools::install_github("dgonxalex80/paqueteNIV")
 
 |    paquete        |  descripción                                              |
 |:------------------|:----------------------------------------------------------|
-|tidyverse          | |
-| * ggplot2         | | 
+|tidyverse          | Colección de paquetes empleados en Ciencia de Datos       |
+| * ggplot2         | paquete para crear gráficos a partir de capas o gramática de gráficos             | 
 | * tibble          | |
 | * tidyr           | |
-| * readr           | |
-| * purrr           | |
-| * dplyr           | |
-| * stringr         | |
-| * forcats         | |
+| * readr           | leer archivos de texto plano como .csv            |
+| * purrr           | trabajar con vectores y funciones                 |
+| * dplyr           | manipular datos : mutar, seleccionar, filtrar, resumir, organizar |
+| * stringr         | trabajar con analisis de texto                    |
+| * forcats         | trabajar con factores y datos categóticos         |
+| readxl            | leer archivos Excel
+| haven             | leer archivos SPSS. Stata, SAS
+| lubridate         | fechas y tiempos
+| hms               | tiempo en horas, minutos, segundos
+| blob              | binarios
 
-|
+
 <br/><br/>
 
 
@@ -88,7 +93,5 @@ La función `help()`  permite la visualización de las ayudas relacionadas con u
 ```{r}
 help("sum")
 ```
-
-
 
 

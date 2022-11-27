@@ -502,15 +502,16 @@ corchetes la formula que conforma la función. Por ejemplo:</p>
 <pre>
 fx=function(x){1/(x-1)^2} # <<-
 fx(100)                   # función evaluada en x=100
+
+[1] 0.0001020304
 </pre>
-<pre><code>[1] 0.0001020304</code></pre>
 <p>En este caso la función es evaluada dentro de un otra función en la
 construcción de un gráfico</p>
 <pre>
 x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
 plot(x, fx(x), type="l", col="#FF7F00", lwd = 5, las=1) # genera grafica
 </pre>
-<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <p>El siguiente ejemplo construye una función para la realización de un
 gráfico. En este caso los valores de entrada estan conformados por un
 vector de datos y un color</p>
@@ -525,25 +526,23 @@ y=sample(1:6,100, replace = T)     # generacion de datos - simula lanzamiento de
 z=table(y)                         # generacion de tabla de datos
 grafica(z,"#034A94")               # evalua la función en los datos z y color #034A94 
 </pre>
-<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <pre>
 w=round(prop.table(z)*100,2)  # genera datos y constuye tabla en porcentaje
 grafica(w,"#0EB0C6")          # evalua la funcion con w y color azul
 </pre>
-<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
-<p><a href="https://r-charts.com/es/colores/">R CHARTS: colores en
-R</a></p>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p><br/><br/></p>
 </div>
 <div id="ts" class="section level2">
 <h2><strong>ts</strong></h2>
-<p>Los objetos ts corresponde a series temporales que estan cupuestos
-por un inicio, un final y una periodicidad temporal regular</p>
+<p>Los objetos <code>ts</code> corresponde a series temporales que estan
+cupuestos por un inicio, un final y una periodicidad temporal
+regular</p>
 <pre>
 x=rnorm(365, 20,3)
 temperatura=ts(x,freq=12,start=c(1981,1))   # <<-
 </pre>
-<p>Objeto para series de tiempo</p>
 <p><br/><br/><br/></p>
 </div>
 </div>

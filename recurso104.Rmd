@@ -53,7 +53,7 @@ El siguiente código resumen las instrucciones necesarias para cargar el primer 
 install.packages("learnr")                           # solo una vez
 install.packages("devtools")                         # solo una vez
 devtools::install_github("dgonxalex80/paqueteNIV")   # descarga paquete nivelatorioEST
-learnr::run_tutorial("tutorialU101", "paqueteNIV")   # carga tutorialU101
+learnr::run_tutorial("tutorialU101", "paqueteNIV")   # carga tutorial 1
 </pre>
 
 
