@@ -24,24 +24,24 @@ knitr::include_graphics("img/logoR.png")
 
 Es un lenguaje para la computación  estadística, utilizado para el procesamiento de información y generación de modelos estadísticos. 
 
-Entre las principales caractarísticas  estan:
+Entre las principales características  están:
 
-   + Licencia (GNU GPL)  abierta y gratis
-   
-   + Creciente popularidad en ciencia de datos
++ Licencia (GNU GPL)  abierta y gratis
 
-   + Multipalataforma (Linux, Windows, MacOS)
++ Creciente popularidad en ciencia de datos
 
-   + Creado por los estadósticos Ross Ihaka y Robert Gentieman (U.Auckland - Nueva Zelanda) 1993 como [lenguaje para el anaisis de datos y gráficos](https://www.stat.auckland.ac.nz/~ihaka/downloads/R-paper.pdf)
++ Multipalataforma (Linux, Windows, MacOS)
 
-   + Lenguaje multiparadigma
-   
-   + Codigo construido en C y Fortran
-   
-   + Gran comunidad muy activa 
-   
-   + Gran cantidad de librerias o packages (más de  18000) en su gran mayoria estan almacenadas en [CRAN](https://cran.r-project.org/web/packages/available_packages_by_name.html), [Biocondictor](https://bioconductor.org/packages/release/BiocViews.html#___Software),  y otras almacenadeas en github durante su proceso de construcción y ajustes
-   
++ Creado por los estadísticos Ross Ihaka y Robert Gentieman (U.Auckland - Nueva Zelanda) 1993 como [lenguaje para el anaisis de datos y gráficos](https://www.stat.auckland.ac.nz/~ihaka/downloads/R-paper.pdf)
+
++ Lenguaje multiparadigma
+
++ Codigo construido en C y Fortran
+
++ Gran comunidad muy activa 
+
++ Gran cantidad de librerías o packages (más de  18000) en su gran mayoría están almacenadas en [CRAN](https://cran.r-project.org/web/packages/available_packages_by_name.html), [Biocondictor](https://bioconductor.org/packages/release/BiocViews.html#___Software),  y otras almacenadas en github durante su proceso de construcción y ajustes
+
 <br/><br/>
 
 
@@ -72,7 +72,7 @@ knitr::include_graphics("img/VRStudio.png")
 
 1. Fuente (Source) : Ventana donde se trabajan los script  con código que se guardan para posterior utilización
 2. Consola (Console) : Ventana donde se pueden escribir comandos de manera directa
-3. Ambiente (Environment) : Ventana donde se pueden observar las varables y objetos creados
+3. Ambiente (Environment) : Ventana donde se pueden observar las variables y objetos creados
 4. Archivos (Files) : Ventana que muestra el directorio y los archivos en el que estamos trabajando
 5. Graficos (plots) : Ventana que presenta los gráficos construidos
 6. Paquetes (Packages) : Ventana que permite instalar los paquetes requeridos
@@ -94,13 +94,13 @@ En los siguientes enlaces se pueden descargar los programas para su instalación
 + un visor de pdf en caso de no tenerlos
 + Python
 
-Estos programas se insertan dentro de la configuración inicial al instalar posteriormente RStudio y serán de gran utilidad al procesar informes mediantes archivos Rmd
+Estos programas se insertan dentro de la configuración inicial al instalar posteriormente RStudio y serán de gran utilidad al procesar informes mediante archivos Rmd
 
 <br/>
 
 R cuenta con una ventana de ayudas que permite revisar las sintaxis y detalles de sus parámetros, al igual que ejemplos y artículos relacionados con las funciones consultadas
 
-Para asceder a las ayudas se puede consultar directamente en la venta Help (#7 de la imagen) o desde la linea de la Consola:
+Para ascender a las ayudas se puede consultar directamente en la venta Help (#7 de la imagen) o desde la linea de la Consola:
 
 <pre>
 help("lm")
@@ -113,7 +113,7 @@ help("lm")
 
 
 
-A manera de instroducción a  continuación se relacionan algunas ayudas para la iniciación del lenguaje :
+A manera de introducción a  continuación se relacionan algunas ayudas para la iniciación del lenguaje :
 
 <br/><br/><br/>
 
@@ -167,7 +167,7 @@ Arreglo bidimensional de valores
 
 <pre>
 x=1:9                # vector de 9 valores
-m=matrix(x,nrow=3)   # matriz con 3 filas y 3 columnaS
+m=matrix(x,nrow=3)   # matriz con 3 filas y 3 columnas
 </pre>
 
 ```{r, echo=FALSE}
@@ -183,7 +183,7 @@ m=matrix(x,nrow=3)   # <<-
 ## **arrays**  
 
 Arreglos multimensionales de valores. 
-En el siguiente ejemplo se representa un arreglo de 3 matrices 3x3 que conformarian en 3D un cubo de datos
+En el siguiente ejemplo se representa un arreglo de 3 matrices 3x3 que conformarían en 3D un cubo de datos
 
 <pre>
 x=1:9
@@ -254,7 +254,7 @@ data(iris)
 
 ## **funciones**
 
-Para construir una función utilizamos la palabra `function`, entre parentesis los valores de entrada y entre corchetes la formula que conforma la función. Por ejemplo:
+Para construir una función utilizamos la palabra `function`, entre paréntesis los valores de entrada y entre corchetes la formula que conforma la función. Por ejemplo:
 
 $$f(x)=\dfrac{1}{(x-1)^{2}}$$
 
@@ -279,41 +279,41 @@ x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con pas
 plot(x, fx(x), type="l", col="#FF7F00", lwd = 5, las=1) # genera grafica
 ```
 
-El siguiente ejemplo construye una función para la realización de un gráfico. En este caso los valores de entrada estan conformados por un vector de datos y un color
+El siguiente ejemplo construye una función para la realización de un gráfico. En este caso los valores de entrada están conformados por un vector de datos y un color
 
 <pre>
-# funcion definida para la construccion de graficos
+# funcion definida para la construcción de gráficos
 grafica=function(x,color){
-        barplot(x,
-                col=color, las=1)
+	barplot(x,
+	col=color, las=1)
 }
 
 y=sample(1:6,100, replace = T)     # generacion de datos - simula lanzamiento de dado
 z=table(y)                         # generacion de tabla de datos
-grafica(z,"#034A94")               # evalua la función en los datos z y color #034A94 
+grafica(z,"#034A94")               # evalúa la función en los datos z y color #034A94 
 </pre>
 
 ```{r, echo=FALSE}
 y=sample(1:6,100, replace = T)  # generacion de datos
-# funcion definida para la construccion de graficos
+# funcion definida para la construcción de gráficos
 grafica=function(x,color){
-        barplot(x,
-                col=color, las=1)
+	barplot(x,
+	col=color, las=1)
 }
 
 z=table(y) # generacion de tabla de datos
-grafica(z,"#034A94")  # evalua la funcion en los datos z y colo rojo
+grafica(z,"#034A94")  # evalúa la función en los datos z y colo rojo
 ```
 
 <pre>
-w=round(prop.table(z)*100,2)  # genera datos y constuye tabla en porcentaje
-grafica(w,"#0EB0C6")          # evalua la funcion con w y color azul
+w=round(prop.table(z)*100,2)  # genera datos y construye tabla en porcentaje
+grafica(w,"#0EB0C6")          # evalúa la función con w y color azul
 </pre>
 
 
 ```{r tidy=FALSE, echo=FALSE}
-w=round(prop.table(z)*100,2)  # genera datos y constuye tabla en porcentaje
-grafica(w,"#0EB0C6")  # evalua la funcion con w y color azul
+w=round(prop.table(z)*100,2)  # genera datos y construye tabla en porcentaje
+grafica(w,"#0EB0C6")  # evaluá la función con w y color azul
 ```
 
 
@@ -321,7 +321,7 @@ grafica(w,"#0EB0C6")  # evalua la funcion con w y color azul
 
 ## **ts**
 
-Los objetos `ts` corresponde a series temporales que estan cupuestos por un inicio, un final y una periodicidad temporal regular
+Los objetos `ts` corresponde a series temporales que están compuestos por un inicio, un final y una periodicidad temporal regular
 
 <pre>
 x=rnorm(365, 20,3)

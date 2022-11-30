@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
 
 
-Una de las actividades principales al desarrollar proyectos en Ciencia de Datos ademas de los procesos de recolección y ajuste de datos y modelación consiste en poder comunicar de manera adecuada los resultados. Para ellos existen muchas posibilidades como pueden ser : articulos, libros, sitios web, posters, presentaciones y blogs entre otros 
+Una de las actividades principales al desarrollar proyectos en Ciencia de Datos ademas de los procesos de recolección y ajuste de datos y modelación consiste en poder comunicar de manera adecuada los resultados. Para ellos existen muchas posibilidades como pueden ser : artículos, libros, sitios web, posters, presentaciones y blogs entre otros 
 
 Normalmente los procesos de importar, ajuste de los datos, la modelación, la representación gráfica se hace en programas diferentes a los que se utilizan para su publicación generando mas tiempo en en el proceso de comunicación pero haciendo popular el Ctrl+C , Ctrl+V
 
@@ -65,7 +65,7 @@ Ademas de estos documentos existen plantillas que se activan al instalar paquete
 * xarimgan que permiote crear presentaciones
 * bookdown para crear libros
 
-Es recomendable crar un proyecto al inicio con el fin de que todos los codigos, imagenes y demas archivos queden asociados a una carpeta de tal forma que esten disponibles cuando se active el proyecto
+Es recomendable crear un proyecto al inicio con el fin de que todos los códigos, imágenes y ademas archivos queden asociados a una carpeta de tal forma que estén disponibles cuando se active el proyecto
 
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
@@ -74,11 +74,11 @@ knitr::include_graphics("img/Project1.png")
 
 Presentando tres opciones:
 
-* **New Directory** : Creamos un nuevo proyecto para lo cual temos varias plantillas
+* **New Directory** : Cuando creamos un nuevo proyecto. Esta opción presenta varias plantillas 
 
 * **Existing Directory** : Cuando tenemos un directorio ya creado y queremos ubicar nuestro proyecto en el
 
-* **Version Control** : esta opción se utiliza cuando queremos clonar un repositorio previamente creado en GitHub
+* **Version Control** : Esta opción se utiliza cuando queremos clonar un repositorio previamente creado en GitHub
 
 <br/><br/>
 
@@ -121,7 +121,7 @@ El proceso anterior crea un nuevo proyecto llamado **Libro** que contiene varios
 ```{r, echo=FALSE, out.width="60%", fig.align = "center"}
 knitr::include_graphics("img/libro1.png")
 ```
-Para procesar el libro convirtiendolo en formato HTML o pdf se utiliza el boton Build Book ubicado en la ventana Build
+Para procesar el libro convirtiendolo en formato HTML o pdf se utiliza el botón Build Book ubicado en la ventana Build
 
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}

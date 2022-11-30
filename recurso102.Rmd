@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA)
 
 El lenguaje **R** esta conformado por miles de paquetes o **Packages** construidos por investigadores en diversos temas y área del conocimiento
 
-Al instalar **R** se descargan con el programa una serie de paquetes para ser utiliadas de manera inmediata. A este primer conjunto se llama **base** y permite dar respuesta a problemas básicos. Sin embargo en algunos casos es necesario instalar paquetes adicionales, los cuales iremos anunciando en la medida que sean necesario. ([paquetes más populares CRAN](https://gallery.shinyapps.io/087-crandash/))
+Al instalar **R** se descargan con el programa una serie de paquetes para ser utilizados de manera inmediata. A este primer conjunto se llama **base** y permite dar respuesta a problemas básicos. Sin embargo en algunos casos es necesario instalar paquetes adicionales, los cuales iremos anunciando en la medida que sean necesario. ([paquetes más populares CRAN](https://gallery.shinyapps.io/087-crandash/))
 
 
 
@@ -24,7 +24,7 @@ La instalación de paquetes se puede hacer de dos formas :
 
 <br/><br/>
 
-#### 1. Utilizando la venatana **Packages** ubicada en la parte inferior derecha de RStudio
+#### 1. Utilizando la ventana **Packages** ubicada en la parte inferior derecha de RStudio
 
 
 ```{r, echo=FALSE, out.width="60%", fig.align = "left"}
@@ -59,31 +59,30 @@ devtools::install_github("dgonxalex80/paqueteNIV")
 <br/><br/>
 
 
-|    paquete        |  descripción                                              |
-|:------------------|:----------------------------------------------------------|
-|tidyverse          | Colección de paquetes empleados en Ciencia de Datos       |
-| * ggplot2         | paquete para crear gráficos a partir de capas o gramática de gráficos             | 
-| * tibble          | |
-| * tidyr           | |
-| * readr           | leer archivos de texto plano como .csv            |
-| * purrr           | trabajar con vectores y funciones                 |
-| * dplyr           | manipular datos : mutar, seleccionar, filtrar, resumir, organizar |
-| * stringr         | trabajar con analisis de texto                    |
-| * forcats         | trabajar con factores y datos categóticos         |
-| readxl            | leer archivos Excel
-| haven             | leer archivos SPSS. Stata, SAS
-| lubridate         | fechas y tiempos
-| hms               | tiempo en horas, minutos, segundos
-| blob              | binarios
-|summarytools       ||
-|psych       ||
-|agricolae||
-|devtools ||
-|learnr       ||
-|bookdown||
-|xaringan||
-|rmarkdown||
-|paqueteNIV       ||
+|    paquete        |  descripción                                                            |
+|:------------------|:------------------------------------------------------------------------|
+|tidyverse          | colección de paquetes empleados en Ciencia de Datos                     |
+| * ggplot2         | crear gráficos a partir de capas o gramática de gráficos                | 
+| * tibble          | manejo de bases                                                         |
+| * tidyr           | crear bases de datos ordenadas                                          |
+| * readr           | leer archivos de texto plano como .csv                                  |
+| * purrr           | trabajar con vectores y funciones                                       |
+| * dplyr           | manipular datos : mutar, seleccionar, filtrar, resumir, organizar       |
+| * stringr         | trabajar con análisis de texto                                          |
+| * forcats         | trabajar con factores y datos categóricos                               |
+| readxl            | leer archivos Excel                                                     |
+| haven             | leer archivos SPSS. Stata, SAS                                          |
+| lubridate         | fechas y tiempos                                                        |
+| hms               | tiempo en horas, minutos, segundos                                      | 
+|summarytools       | exploración de datos, resumen descriptivos, tablas de frecuencia        |
+|psych              | análisis psicométrico, análisis multivariado                            |
+|agricolae          | análisis para investigación agrícola                                    |
+|devtools           | desarrollo de paquetes en R                                             |
+|learnr             | desarrollo de tutoriales en R                                           |
+|bookdown           | escritura de libros, artículos e informes                               |
+|xaringan           | creación de presentaciones HTML5                                        |
+|rmarkdown          | crear documento desde R                                                 |
+|paqueteNIV         | paquete del curso Nivelatorio de Estadística                            |
 
 <br/><br/>
 

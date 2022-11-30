@@ -280,24 +280,24 @@ $(document).ready(function () {
 <p><br/></p>
 <p>Es un lenguaje para la computación estadística, utilizado para el
 procesamiento de información y generación de modelos estadísticos.</p>
-<p>Entre las principales caractarísticas estan:</p>
+<p>Entre las principales características están:</p>
 <ul>
 <li><p>Licencia (GNU GPL) abierta y gratis</p></li>
 <li><p>Creciente popularidad en ciencia de datos</p></li>
 <li><p>Multipalataforma (Linux, Windows, MacOS)</p></li>
-<li><p>Creado por los estadósticos Ross Ihaka y Robert Gentieman
+<li><p>Creado por los estadísticos Ross Ihaka y Robert Gentieman
 (U.Auckland - Nueva Zelanda) 1993 como <a
 href="https://www.stat.auckland.ac.nz/~ihaka/downloads/R-paper.pdf">lenguaje
 para el anaisis de datos y gráficos</a></p></li>
 <li><p>Lenguaje multiparadigma</p></li>
 <li><p>Codigo construido en C y Fortran</p></li>
 <li><p>Gran comunidad muy activa</p></li>
-<li><p>Gran cantidad de librerias o packages (más de 18000) en su gran
-mayoria estan almacenadas en <a
+<li><p>Gran cantidad de librerías o packages (más de 18000) en su gran
+mayoría están almacenadas en <a
 href="https://cran.r-project.org/web/packages/available_packages_by_name.html">CRAN</a>,
 <a
 href="https://bioconductor.org/packages/release/BiocViews.html#___Software">Biocondictor</a>,
-y otras almacenadeas en github durante su proceso de construcción y
+y otras almacenadas en github durante su proceso de construcción y
 ajustes</p></li>
 </ul>
 <p><br/><br/></p>
@@ -320,7 +320,7 @@ que se guardan para posterior utilización</li>
 <li>Consola (Console) : Ventana donde se pueden escribir comandos de
 manera directa</li>
 <li>Ambiente (Environment) : Ventana donde se pueden observar las
-varables y objetos creados</li>
+variables y objetos creados</li>
 <li>Archivos (Files) : Ventana que muestra el directorio y los archivos
 en el que estamos trabajando</li>
 <li>Graficos (plots) : Ventana que presenta los gráficos
@@ -348,20 +348,20 @@ instalar los siguientes programas</p>
 </ul>
 <p>Estos programas se insertan dentro de la configuración inicial al
 instalar posteriormente RStudio y serán de gran utilidad al procesar
-informes mediantes archivos Rmd</p>
+informes mediante archivos Rmd</p>
 <p><br/></p>
 <p>R cuenta con una ventana de ayudas que permite revisar las sintaxis y
 detalles de sus parámetros, al igual que ejemplos y artículos
 relacionados con las funciones consultadas</p>
-<p>Para asceder a las ayudas se puede consultar directamente en la venta
-Help (#7 de la imagen) o desde la linea de la Consola:</p>
+<p>Para ascender a las ayudas se puede consultar directamente en la
+venta Help (#7 de la imagen) o desde la linea de la Consola:</p>
 <pre>
 help("lm")
 </pre>
 <pre>
 ?"lm"
 </pre>
-<p>A manera de instroducción a continuación se relacionan algunas ayudas
+<p>A manera de introducción a continuación se relacionan algunas ayudas
 para la iniciación del lenguaje :</p>
 <p><br/><br/><br/></p>
 </div>
@@ -440,14 +440,14 @@ y=c("Muy regular", "Regular", "Bueno", "Muy bueno", "Excelente")     <i class="f
 <p>Arreglo bidimensional de valores</p>
 <pre>
 x=1:9                # vector de 9 valores
-m=matrix(x,nrow=3)   # matriz con 3 filas y 3 columnaS
+m=matrix(x,nrow=3)   # matriz con 3 filas y 3 columnas
 </pre>
 <p><br/><br/></p>
 </div>
 <div id="arrays" class="section level2">
 <h2><strong>arrays</strong></h2>
 <p>Arreglos multimensionales de valores. En el siguiente ejemplo se
-representa un arreglo de 3 matrices 3x3 que conformarian en 3D un cubo
+representa un arreglo de 3 matrices 3x3 que conformarían en 3D un cubo
 de datos</p>
 <pre>
 x=1:9
@@ -496,7 +496,7 @@ data(iris)
 <div id="funciones" class="section level2">
 <h2><strong>funciones</strong></h2>
 <p>Para construir una función utilizamos la palabra
-<code>function</code>, entre parentesis los valores de entrada y entre
+<code>function</code>, entre paréntesis los valores de entrada y entre
 corchetes la formula que conforma la función. Por ejemplo:</p>
 <p><span class="math display">\[f(x)=\dfrac{1}{(x-1)^{2}}\]</span></p>
 <pre>
@@ -513,31 +513,31 @@ plot(x, fx(x), type="l", col="#FF7F00", lwd = 5, las=1) # genera grafica
 </pre>
 <p><img src="index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <p>El siguiente ejemplo construye una función para la realización de un
-gráfico. En este caso los valores de entrada estan conformados por un
+gráfico. En este caso los valores de entrada están conformados por un
 vector de datos y un color</p>
 <pre>
-# funcion definida para la construccion de graficos
+# funcion definida para la construcción de gráficos
 grafica=function(x,color){
-        barplot(x,
-                col=color, las=1)
+    barplot(x,
+    col=color, las=1)
 }
 
 y=sample(1:6,100, replace = T)     # generacion de datos - simula lanzamiento de dado
 z=table(y)                         # generacion de tabla de datos
-grafica(z,"#034A94")               # evalua la función en los datos z y color #034A94 
+grafica(z,"#034A94")               # evalúa la función en los datos z y color #034A94 
 </pre>
 <p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <pre>
-w=round(prop.table(z)*100,2)  # genera datos y constuye tabla en porcentaje
-grafica(w,"#0EB0C6")          # evalua la funcion con w y color azul
+w=round(prop.table(z)*100,2)  # genera datos y construye tabla en porcentaje
+grafica(w,"#0EB0C6")          # evalúa la función con w y color azul
 </pre>
 <p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p><br/><br/></p>
 </div>
 <div id="ts" class="section level2">
 <h2><strong>ts</strong></h2>
-<p>Los objetos <code>ts</code> corresponde a series temporales que estan
-cupuestos por un inicio, un final y una periodicidad temporal
+<p>Los objetos <code>ts</code> corresponde a series temporales que están
+compuestos por un inicio, un final y una periodicidad temporal
 regular</p>
 <pre>
 x=rnorm(365, 20,3)
