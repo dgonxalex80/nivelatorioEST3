@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA)
 
 <br/><br/>
 
-# **Instalación de paquetes en R**
+## <span style="color:#FF7F00">**INSTALACIÓN DE PAQUETES EN R**</span>
 
 
 El lenguaje **R** esta conformado por miles de paquetes o **Packages** construidos por investigadores en diversos temas y área del conocimiento
@@ -54,7 +54,7 @@ devtools::install_github("dgonxalex80/paqueteNIV")
 <br/><br/>
 
 
-### **Paquetes más utilizados en ciencia de datos** 
+## <span style="color:#FF7F00">**PAQUETES MÁS UTILIZADOS EN CIENCIA DE DATOS**</span>
 
 <br/><br/>
 
@@ -90,7 +90,7 @@ devtools::install_github("dgonxalex80/paqueteNIV")
 <br/><br/>
 
 
-## **Ventana Help**
+## <span style="color:#FF7F00">**VENTANA HELP**</span>
 
 La función `help()`  permite la visualización de las ayudas relacionadas con una función en la ventana Help  que permite visualizar la sintaxis de las funciones. En el siguiente ejemplo la función help("install.packages") permite visualizar los parámetros de la función
 
