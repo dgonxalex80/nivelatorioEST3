@@ -14,7 +14,7 @@
 
 <title> Introducción a R</title>
 
-<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -549,7 +549,7 @@ temperatura=ts(x,freq=12,start=c(1981,1))   # <<-
 </div>
 </div>
 <div id="operadores-en-r" class="section level1">
-<h1><span style="color:#FF7F00"><strong>OPERADORES EN
+<h1><span style="color:#FF7F00"><strong>Operadores en
 R</strong></span></h1>
 <table>
 <colgroup>
@@ -632,6 +632,43 @@ R</strong></span></h1>
 <p>Tomado de : <a
 href="https://bookdown.org/jboscomendoza/r-principiantes4/">R para
 principiantes</a></p>
+<p><br/><br/><br/></p>
+</div>
+<div id="algunas-funciones-útilies" class="section level1">
+<h1><span style="color:#FF7F00"><strong>Algunas funciones
+útilies</strong></span></h1>
+<p><br/></p>
+<ul>
+<li>rep()</li>
+</ul>
+<pre>
+rep(x,                # objeto a replicar 
+    times = 1,        # número de veces que ser replica objeto
+    length.out = NA,  # repetir el objeto las veces necesarias para crear vector de esta longitud
+    each = 1)         # número de veces que se replica elementos individiales del objeto
+
+</pre>
+<p><br/></p>
+<p><strong>Ejemplo 1</strong></p>
+<pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
+rep(vector, times=4)</code></pre>
+<pre>
+[1] "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno"  "dos"  "tres"
+</pre>
+<p><br/></p>
+<p><strong>Ejemplo 2</strong></p>
+<pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
+rep(vector, each=4)</code></pre>
+<pre>
+[1] "uno"  "uno"  "uno"  "uno"  "dos"  "dos"  "dos"  "dos"  "tres" "tres" "tres" "tres"
+</pre>
+<p><br/></p>
+<p><strong>Ejemplo 3</strong></p>
+<pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
+rep(vector, times=4,  length.out=7)</code></pre>
+<pre>
+[1] "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno" 
+</pre>
 </div>
 
 

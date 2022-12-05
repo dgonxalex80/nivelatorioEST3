@@ -336,7 +336,7 @@ temperatura=ts(x,freq=12,start=c(1981,1))  # <<-
 
 <br/><br/><br/>
 
-#  <span style="color:#FF7F00">**OPERADORES EN R**</span>
+#  <span style="color:#FF7F00">**Operadores en R**</span>
 
 |      |Aritméticos         |      | Comparativos       |        | Lógicos     |
 |:----:|:-------------------|:----:|:-------------------|:------:|:------------|
@@ -349,3 +349,58 @@ temperatura=ts(x,freq=12,start=c(1981,1))  # <<-
 |  %/% | división enteros   |      |                    |        |             |
 
 Tomado de : [R para principiantes](https://bookdown.org/jboscomendoza/r-principiantes4/)
+
+<br/><br/><br/>
+
+#  <span style="color:#FF7F00">**Algunas funciones útilies**</span>
+
+<br/>
+
+* rep()
+
+<pre>
+rep(x,                # objeto a replicar 
+    times = 1,        # número de veces que ser replica objeto
+    length.out = NA,  # repetir el objeto las veces necesarias para crear vector de esta longitud
+    each = 1)         # número de veces que se replica elementos individiales del objeto
+
+</pre>
+
+<br/>
+
+**Ejemplo 1**
+
+```{r, eval=FALSE}
+vector= c("uno", "dos", "tres")
+rep(vector, times=4)
+```
+ 
+<pre>
+[1] "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno"  "dos"  "tres"
+</pre>
+
+<br/>
+
+**Ejemplo 2**
+
+```{r, eval=FALSE}
+vector= c("uno", "dos", "tres")
+rep(vector, each=4)
+```
+
+<pre>
+[1] "uno"  "uno"  "uno"  "uno"  "dos"  "dos"  "dos"  "dos"  "tres" "tres" "tres" "tres"
+</pre> 
+
+<br/>
+
+**Ejemplo 3**
+
+```{r, eval=FALSE}
+vector= c("uno", "dos", "tres")
+rep(vector, times=4,  length.out=7)
+```
+
+<pre>
+[1] "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno" 
+</pre>
