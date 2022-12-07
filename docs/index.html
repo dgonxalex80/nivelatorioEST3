@@ -638,9 +638,8 @@ principiantes</a></p>
 <h1><span style="color:#FF7F00"><strong>Algunas funciones
 útilies</strong></span></h1>
 <p><br/></p>
-<ul>
-<li>rep()</li>
-</ul>
+<div id="rep" class="section level3">
+<h3><strong>rep()</strong></h3>
 <pre>
 rep(x,                # objeto a replicar 
     times = 1,        # número de veces que ser replica objeto
@@ -669,6 +668,68 @@ rep(vector, times=4,  length.out=7)</code></pre>
 <pre>
 [1] "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno" 
 </pre>
+<p><br/><br/><br/></p>
+</div>
+<div id="seq" class="section level3">
+<h3><strong>seq()</strong></h3>
+<pre>
+seq(from=1,             # valor inicial  
+    to=1,               # valor final
+    by=1,               # valor incremento
+    length.out=NULL,    # longitud del secuencia   
+    along.with=NULL)    # longitd del vector
+</pre>
+<p><strong>Ejemplo</strong></p>
+<p>Secuencia de números enteros del 1 al 20</p>
+<pre class="r"><code>seq(20)    # equivalente a 1:20</code></pre>
+<pre>
+[1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+</pre>
+<p><br/></p>
+<p><strong>Ejemplo</strong></p>
+<p>Secuencia de números pares entre el 1 y el 20</p>
+<pre class="r"><code>seq(2,20,2)</code></pre>
+<pre>
+[1]  2  4  6  8 10 12 14 16 18 20
+</pre>
+<p><br/></p>
+<p><strong>Ejemplo</strong></p>
+<p>Secuencia de números del 0 al 1 con incrementos de 0.1</p>
+<pre class="r"><code>seq(0, 1, 0.1)</code></pre>
+<pre>
+[1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+</pre>
+<p><br/><br/><br/></p>
+</div>
+<div id="round" class="section level3">
+<h3><strong>round()</strong></h3>
+<pre>
+round(x,             # valor  
+      digits = 0)    # nmero de digitos
+</pre>
+<p><strong>Ejemplo</strong></p>
+<p>Aprimar el valor de <span class="math inline">\(\pi\)</span> a 3
+decimales</p>
+<pre class="r"><code>pi</code></pre>
+<pre><code>[1] 3.141593</code></pre>
+<pre class="r"><code>round(pi,3)    # aproxima a 3 decimales</code></pre>
+<pre><code>[1] 3.142</code></pre>
+<pre>
+[1] 3.141593
+[1] 3.142
+</pre>
+<p><br/><br/><br/></p>
+</div>
+<div id="trunc" class="section level3">
+<h3><strong>trunc()</strong></h3>
+<p>Entrega la parte entera de un número</p>
+<p><strong>Ejemplo</strong></p>
+<p>Sacar la parte entera de <span class="math inline">\(\pi\)</span></p>
+<pre class="r"><code>trunc(pi)</code></pre>
+<pre>
+[1] 3
+</pre>
+</div>
 </div>
 
 
