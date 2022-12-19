@@ -32,7 +32,7 @@ knitr::include_graphics("img/rmarkdown_universe.jpg")
 ```
 <br/><br/>
 
-## <span style="color:#FF7F00">**FORMATO Rmd**</span>
+## <span style="color:#FF7F00">**Formato Rmd**</span>
 
 Para asceder a una plantilla Rmd ingresamos por :
 
@@ -86,7 +86,7 @@ Presentando tres opciones:
 
 <br/>
 
-## <span style="color:#FF7F00">**SINTAXIS Rmd**</span>
+## <span style="color:#FF7F00">**Sintaxis Rmd**</span>
 
 <br/><br/>
 
@@ -107,7 +107,7 @@ knitr::include_graphics("img/Rmd4.png")
 
 
 
-## <span style="color:#FF7F00">**PLANTILLA PARA LIBRO**</span>
+## <span style="color:#FF7F00">**Plantilla para libro**</span>
 
 Es facil construir un libro en Rmd : File / New Project.. / New Directory /  Book project using bookdown
 

@@ -31,7 +31,7 @@ Se utilizarán tutoriales que permitirán poner a prueba tus conocimientos, por 
 
 <br/><br/>
 
-### <span style="color:#FF7F00">**INSTALACIÓN DE PAQUETES**</span>
+### <span style="color:#FF7F00">**Instalación de paquetes**</span>
 
 <br/>
 
