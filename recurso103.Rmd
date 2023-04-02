@@ -32,7 +32,7 @@ knitr::include_graphics("img/rmarkdown_universe.jpg")
 ```
 <br/><br/>
 
-## <span style="color:#FF7F00">**Formato Rmd**</span>
+## <span style="color:#034a94">**Formato Rmd**</span>
 
 Para asceder a una plantilla Rmd ingresamos por :
 
@@ -86,7 +86,7 @@ Presentando tres opciones:
 
 <br/>
 
-## <span style="color:#FF7F00">**Sintaxis Rmd**</span>
+## <span style="color:#034a94">**Sintaxis Rmd**</span>
 
 <br/><br/>
 
@@ -101,15 +101,16 @@ El lenguaje [Markdown](https://en.wikipedia.org/wiki/Markdown) es incorporado en
 ```{r, echo=FALSE, out.width="90%", fig.align = "center"}
 knitr::include_graphics("img/Rmd4.png")
 ```
+
 <br/><br/>
 
 
 
+## <span style="color:#034a94">**Plantilla para libro**</span>
 
+<br/>
 
-## <span style="color:#FF7F00">**Plantilla para libro**</span>
-
-Es facil construir un libro en Rmd : File / New Project.. / New Directory /  Book project using bookdown
+Es fácil construir un libro en Rmd : File / New Project.. / New Directory /  Book project using bookdown
 
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
@@ -118,11 +119,15 @@ knitr::include_graphics("img/book1.png")
 
 El proceso anterior crea un nuevo proyecto llamado **Libro** que contiene varios archivos
 
+<br/><br/>
+
 ```{r, echo=FALSE, out.width="60%", fig.align = "center"}
 knitr::include_graphics("img/libro1.png")
 ```
-Para procesar el libro convirtiendolo en formato HTML o pdf se utiliza el botón Build Book ubicado en la ventana Build
 
+Para procesar el libro convirtiéndolo en formato HTML o pdf se utiliza el botón Build Book ubicado en la ventana Build
+
+<br/><br/>
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 knitr::include_graphics("img/libro2.png")
@@ -134,7 +139,9 @@ Los cambios que se generen en los archivos de la plantilla quedarán realizados 
 
 <br/><br/>
 
-**Ejemplo** 
+### <span style="color:#FF7F00"> **Ejemplo**</span> 
+
+<br/>
 
 [**Big Book of R**](https://www.bigbookofr.com/index.html)
 

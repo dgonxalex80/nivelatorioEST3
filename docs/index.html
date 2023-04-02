@@ -14,7 +14,7 @@
 
 <title> Introducción a R</title>
 
-<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -276,7 +276,7 @@ $(document).ready(function () {
 <p><img src="img/logoR.png" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
 <p><br/><br/></p>
 <div id="que-es-r" class="section level1">
-<h1><span style="color:#FF7F00"><strong>Que es R</strong></span></h1>
+<h1><span style="color:#034a94"><strong>Que es R</strong></span></h1>
 <p><br/></p>
 <p>Es un lenguaje para la computación estadística, utilizado para el
 procesamiento de información y generación de modelos estadísticos.</p>
@@ -305,7 +305,7 @@ ajustes</p></li>
 <p><br/><br/><br/></p>
 </div>
 <div id="qué-es-rstudio" class="section level1">
-<h1><span style="color:#FF7F00"><strong>¿Qué es
+<h1><span style="color:#034a94"><strong>¿Qué es
 RStudio?</strong></span></h1>
 <p><img src="img/logoRStudio.png" width="20%" style="display: block; margin: auto auto auto 0;" /></p>
 <p>Esta interfaz o IDE que integra un conjunto de herramientas y
@@ -339,8 +339,11 @@ instalación :</p>
 <li><p><a href="https://rstudio.com/products/rstudio/download/">RStudio
 download</a></p></li>
 </ul>
-<p><strong>Nota</strong>: Antes de instalar RStudio se recomienda
-instalar los siguientes programas</p>
+<p><br/><br/></p>
+<div id="nota" class="section level3 content-box-gray">
+<h3><span style="color:#686868"><strong>Nota</strong></span></h3>
+<p>Antes de instalar RStudio se recomienda instalar los siguientes
+programas</p>
 <ul>
 <li>git</li>
 <li>Miktex o Texlife dependiendo el sistema operativo</li>
@@ -350,7 +353,8 @@ instalar los siguientes programas</p>
 <p>Estos programas se insertan dentro de la configuración inicial al
 instalar posteriormente RStudio y serán de gran utilidad al procesar
 informes mediante archivos Rmd</p>
-<p><br/></p>
+</div>
+<p><br/><br/></p>
 <p>R cuenta con una ventana de ayudas que permite revisar las sintaxis y
 detalles de sus parámetros, al igual que ejemplos y artículos
 relacionados con las funciones consultadas</p>
@@ -366,20 +370,20 @@ help("lm")
 para la iniciación del lenguaje :</p>
 <p><br/><br/><br/></p>
 <div id="tipos-de-objetos-en-r" class="section level2">
-<h2><span style="color:#FF7F00"><strong>Tipos de objetos en
+<h2><span style="color:#034a94"><strong>Tipos de objetos en
 R</strong></span></h2>
 <p><br/><br/></p>
 <table>
 <colgroup>
-<col width="12%" />
-<col width="46%" />
-<col width="41%" />
+<col width="15%" />
+<col width="57%" />
+<col width="27%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th align="left">Objeto</th>
 <th align="left">tipos</th>
-<th align="left">se permite varios tipos en mismo objeto ?</th>
+<th align="left">permite varios tipos?</th>
 </tr>
 </thead>
 <tbody>
@@ -421,13 +425,14 @@ expresión</td>
 </tr>
 </tbody>
 </table>
-<p>Tomado de: <a
+<p><sub>Tomado de: <a
 href="https://bookdown.org/jboscomendoza/r-principiantes4/">R para
-principiantes</a></p>
+principiantes</a> </sub></p>
 <p>A continuación se presentan algunos ejemplos de objetos</p>
+<p><br/><br/></p>
 </div>
 <div id="vector" class="section level2">
-<h2><span style="color:#FF7F00"><strong>vector</strong></span></h2>
+<h2><span style="color:#034a94"><strong>vector</strong></span></h2>
 <p>Arreglo unidimensional de valores, caracteres o cadenas</p>
 <pre>
 x=c(1,2,3,4,5)    
@@ -438,7 +443,7 @@ y=c("Muy regular", "Regular", "Bueno", "Muy bueno", "Excelente")     <i class="f
 <p><br/><br/></p>
 </div>
 <div id="matriz" class="section level2">
-<h2><span style="color:#FF7F00"><strong>matriz</strong></span></h2>
+<h2><span style="color:#034a94"><strong>matriz</strong></span></h2>
 <p>Arreglo bidimensional de valores</p>
 <pre>
 x=1:9                # vector de 9 valores
@@ -447,7 +452,7 @@ m=matrix(x,nrow=3)   # matriz con 3 filas y 3 columnas
 <p><br/><br/></p>
 </div>
 <div id="arrays" class="section level2">
-<h2><span style="color:#FF7F00"><strong>arrays</strong></span></h2>
+<h2><span style="color:#034a94"><strong>arrays</strong></span></h2>
 <p>Arreglos multimensionales de valores. En el siguiente ejemplo se
 representa un arreglo de 3 matrices 3x3 que conformarían en 3D un cubo
 de datos</p>
@@ -461,7 +466,7 @@ mn=array(c(x,y),dim=c(3,3,3)) # <<-
 <p><br/><br/></p>
 </div>
 <div id="factores" class="section level2">
-<h2><span style="color:#FF7F00"><strong>factores</strong></span></h2>
+<h2><span style="color:#034a94"><strong>factores</strong></span></h2>
 <p>Vector de variables categóricas, por lo general se utilizan para
 dividir una base en subgrupos</p>
 <pre>
@@ -472,7 +477,7 @@ y=as.factor(y)               # <<-
 <p><br/><br/></p>
 </div>
 <div id="listas" class="section level2">
-<h2><span style="color:#FF7F00"><strong>listas</strong></span></h2>
+<h2><span style="color:#034a94"><strong>listas</strong></span></h2>
 <p>Colección de objetos cada uno de tipos diferentes. El objeto de esta
 clase guarda valores en diferentes formatos.</p>
 <p>En el siguiente ejemplo se construye un objeto <strong>h</strong> que
@@ -485,7 +490,7 @@ h=hist(rnorm(100,25,10))
 <p><br/><br/></p>
 </div>
 <div id="data.frames" class="section level2">
-<h2><span style="color:#FF7F00"><strong>data.frames</strong></span></h2>
+<h2><span style="color:#034a94"><strong>data.frames</strong></span></h2>
 <p>Estructura de datos de dos dimensiones - filas y columnas - base de
 datos. con la función <code>data()</code> se pueden cargar bases de
 datos contenidas en R. <code>data(iris)</code> carga la base iris que
@@ -496,7 +501,7 @@ data(iris)
 <p><br/><br/></p>
 </div>
 <div id="funciones" class="section level2">
-<h2><span style="color:#FF7F00"><strong>funciones</strong></span></h2>
+<h2><span style="color:#034a94"><strong>funciones</strong></span></h2>
 <p>Para construir una función utilizamos la palabra
 <code>function</code>, entre paréntesis los valores de entrada y entre
 corchetes la formula que conforma la función. Por ejemplo:</p>
@@ -537,7 +542,7 @@ grafica(w,"#0EB0C6")          # evalúa la función con w y color azul
 <p><br/><br/></p>
 </div>
 <div id="ts" class="section level2">
-<h2><span style="color:#FF7F00"><strong>ts</strong></span></h2>
+<h2><span style="color:#034a94"><strong>ts</strong></span></h2>
 <p>Los objetos <code>ts</code> corresponde a series temporales que están
 compuestos por un inicio, un final y una periodicidad temporal
 regular</p>
@@ -549,7 +554,7 @@ temperatura=ts(x,freq=12,start=c(1981,1))   # <<-
 </div>
 </div>
 <div id="operadores-en-r" class="section level1">
-<h1><span style="color:#FF7F00"><strong>Operadores en
+<h1><span style="color:#034a94"><strong>Operadores en
 R</strong></span></h1>
 <table>
 <colgroup>
@@ -629,17 +634,17 @@ R</strong></span></h1>
 </tr>
 </tbody>
 </table>
-<p>Tomado de : <a
+<p><sub> Tomado de : <a
 href="https://bookdown.org/jboscomendoza/r-principiantes4/">R para
-principiantes</a></p>
+principiantes</a> </sub></p>
 <p><br/><br/><br/></p>
 </div>
 <div id="algunas-funciones-útilies" class="section level1">
-<h1><span style="color:#FF7F00"><strong>Algunas funciones
+<h1><span style="color:#034a94"><strong>Algunas funciones
 útilies</strong></span></h1>
 <p><br/></p>
 <div id="rep" class="section level3">
-<h3><span style="color:#FF7F00"><strong>rep()</strong></span></h3>
+<h3><span style="color:#034a94"><strong>rep()</strong></span></h3>
 <pre>
 rep(x,                # objeto a replicar 
     times = 1,        # número de veces que ser replica objeto
@@ -648,21 +653,27 @@ rep(x,                # objeto a replicar
 
 </pre>
 <p><br/></p>
-<p><strong>Ejemplo 1</strong></p>
+</div>
+<div id="ejemplo" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
 rep(vector, times=4)</code></pre>
 <pre>
 [1] "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno"  "dos"  "tres"
 </pre>
 <p><br/></p>
-<p><strong>Ejemplo 2</strong></p>
+</div>
+<div id="ejemplo-1" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
 rep(vector, each=4)</code></pre>
 <pre>
 [1] "uno"  "uno"  "uno"  "uno"  "dos"  "dos"  "dos"  "dos"  "tres" "tres" "tres" "tres"
 </pre>
 <p><br/></p>
-<p><strong>Ejemplo 3</strong></p>
+</div>
+<div id="ejemplo-2" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
 rep(vector, times=4,  length.out=7)</code></pre>
 <pre>
@@ -671,7 +682,7 @@ rep(vector, times=4,  length.out=7)</code></pre>
 <p><br/><br/><br/></p>
 </div>
 <div id="seq" class="section level3">
-<h3><span style="color:#FF7F00"><strong>seq()</strong></span></h3>
+<h3><span style="color:#034A94"><strong>seq()</strong></span></h3>
 <pre>
 seq(from=1,             # valor inicial  
     to=1,               # valor final
@@ -679,21 +690,27 @@ seq(from=1,             # valor inicial
     length.out=NULL,    # longitud del secuencia   
     along.with=NULL)    # longitd del vector
 </pre>
-<p><strong>Ejemplo</strong></p>
+</div>
+<div id="ejemplo-3" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Secuencia de números enteros del 1 al 20</p>
 <pre class="r"><code>seq(20)    # equivalente a 1:20</code></pre>
 <pre>
 [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
 </pre>
 <p><br/></p>
-<p><strong>Ejemplo</strong></p>
+</div>
+<div id="ejemplo-4" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Secuencia de números pares entre el 1 y el 20</p>
 <pre class="r"><code>seq(2,20,2)</code></pre>
 <pre>
 [1]  2  4  6  8 10 12 14 16 18 20
 </pre>
 <p><br/></p>
-<p><strong>Ejemplo</strong></p>
+</div>
+<div id="ejemplo-5" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Secuencia de números del 0 al 1 con incrementos de 0.1</p>
 <pre class="r"><code>seq(0, 1, 0.1)</code></pre>
 <pre>
@@ -702,12 +719,14 @@ seq(from=1,             # valor inicial
 <p><br/><br/><br/></p>
 </div>
 <div id="round" class="section level3">
-<h3><span style="color:#FF7F00"><strong>round()</strong></span></h3>
+<h3><span style="color:#034a94"><strong>round()</strong></span></h3>
 <pre>
 round(x,             # valor  
       digits = 0)    # nmero de digitos
 </pre>
-<p><strong>Ejemplo</strong></p>
+</div>
+<div id="ejemplo-6" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Aprimar el valor de <span class="math inline">\(\pi\)</span> a 3
 decimales</p>
 <pre class="r"><code>pi</code></pre>
@@ -721,9 +740,11 @@ decimales</p>
 <p><br/><br/><br/></p>
 </div>
 <div id="trunc" class="section level3">
-<h3><span style="color:#FF7F00"><strong>trunc()</strong></span></h3>
+<h3><span style="color:#034a94"><strong>trunc()</strong></span></h3>
 <p>Entrega la parte entera de un número</p>
-<p><strong>Ejemplo</strong></p>
+</div>
+<div id="ejemplo-7" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Sacar la parte entera de <span class="math inline">\(\pi\)</span></p>
 <pre class="r"><code>trunc(pi)</code></pre>
 <pre>
