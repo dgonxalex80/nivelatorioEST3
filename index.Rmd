@@ -72,11 +72,13 @@ knitr::include_graphics("img/VRStudio.png")
 
 1. Fuente (Source) : Ventana donde se trabajan los script  con código que se guardan para posterior utilización
 2. Consola (Console) : Ventana donde se pueden escribir comandos de manera directa
-3. Ambiente (Environment) : Ventana donde se pueden observar las variables y objetos creados
-4. Archivos (Files) : Ventana que muestra el directorio y los archivos en el que estamos trabajando
-5. Graficos (plots) : Ventana que presenta los gráficos construidos
-6. Paquetes (Packages) : Ventana que permite instalar los paquetes requeridos
-7. Ayudas (Help) : Ventana en la que podemos pedir ayuda sobre las sintaxis de funciones
+3. Terminal : Ventana donde se puede digitar instrucciones de git
+4. Ambiente (Environment) : Ventana donde se pueden observar las variables y objetos creados
+5. Historial (History) : Ventana donde queda registrada la secuencia de instrucciones 
+6. Archivos (Files) : Ventana que muestra el directorio y los archivos en el que estamos trabajando
+7. Graficos (plots) : Ventana que presenta los gráficos construidos
+8. Paquetes (Packages) : Ventana que permite instalar los paquetes requeridos
+9. Ayudas (Help) : Ventana en la que podemos pedir ayuda sobre las sintaxis de funciones
 
 
 <br/><br/>
@@ -124,9 +126,12 @@ A manera de introducción a  continuación se relacionan algunas ayudas para la 
 
 <br/><br/><br/>
 
+
+
 ## <span style="color:#034a94">**Tipos de objetos  en R**</span>
 
-<br/><br/>
+<br/>
+
 
 | Objeto      | tipos                                          | permite varios tipos? |
 |:------------|:-----------------------------------------------|:----------------------|
@@ -138,7 +143,14 @@ A manera de introducción a  continuación se relacionan algunas ayudas para la 
 |  ts         | numéricos, caracter, complejo, lógico          | Si                    |
 |  lista      | numéricos, caracter, complejo, lógico, función, expresión  | Si        |
 
-<sub>Tomado de: [R para principiantes](https://bookdown.org/jboscomendoza/r-principiantes4/) </sub>
+<sub>
+Tomado de: [R para principiantes](https://bookdown.org/jboscomendoza/r-principiantes4/) 
+</sub>
+
+
+
+
+<br/><br/>
 
 A continuación se presentan algunos ejemplos de objetos
 
@@ -345,6 +357,8 @@ temperatura=ts(x,freq=12,start=c(1981,1))  # <<-
 
 <br/><br/><br/>
 
+
+
 #  <span style="color:#034a94">**Operadores en R**</span>
 
 |      |Aritméticos         |      | Comparativos       |        | Lógicos     |
@@ -360,6 +374,7 @@ temperatura=ts(x,freq=12,start=c(1981,1))  # <<-
 <sub>
 Tomado de : [R para principiantes](https://bookdown.org/jboscomendoza/r-principiantes4/)
 </sub>
+
 
 <br/><br/><br/>
 

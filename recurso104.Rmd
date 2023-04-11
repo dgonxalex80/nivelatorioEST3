@@ -21,7 +21,6 @@ Durante los cursos:
 
 * Series de tiempo 
 
-* Estadística Geoespacial
 
 <br/>
 
