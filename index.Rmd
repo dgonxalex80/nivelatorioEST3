@@ -45,10 +45,12 @@ Entre las principales características  están:
 <br/><br/>
 
 
-
+<center>
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 knitr::include_graphics("img/Rt.png")
 ```
+**Figura 3.1** Ventana Terminal de R
+</center>
 
 <br/><br/><br/>
 
@@ -64,21 +66,26 @@ Esta conformada por varias ventana como se muestra en la siguiente imagen:
 
 <br/><br/>
 
+<center>
+
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/VRStudio.png")
 ```
 
+**Figura 3.2** Ventanas  RStudio
+</center>
+
 <br/><br/>
 
-1. Fuente (Source) : Ventana donde se trabajan los script  con código que se guardan para posterior utilización
-2. Consola (Console) : Ventana donde se pueden escribir comandos de manera directa
-3. Terminal : Ventana donde se puede digitar instrucciones de git
-4. Ambiente (Environment) : Ventana donde se pueden observar las variables y objetos creados
-5. Historial (History) : Ventana donde queda registrada la secuencia de instrucciones 
-6. Archivos (Files) : Ventana que muestra el directorio y los archivos en el que estamos trabajando
-7. Graficos (plots) : Ventana que presenta los gráficos construidos
-8. Paquetes (Packages) : Ventana que permite instalar los paquetes requeridos
-9. Ayudas (Help) : Ventana en la que podemos pedir ayuda sobre las sintaxis de funciones
+1. **Fuente** (Source) : Ventana donde se trabajan los script  con código que se guardan para posterior utilización
+2. **Consola** (Console) : Ventana donde se pueden escribir comandos de manera directa
+3. **Terminal** : Ventana donde se puede digitar instrucciones de git
+4. **Ambiente** (Environment) : Ventana donde se pueden observar las variables y objetos creados
+5. **Historial** (History) : Ventana donde queda registrada la secuencia de instrucciones 
+6. **Archivos** (Files) : Ventana que muestra el directorio y los archivos en el que estamos trabajando
+7. **Gráficos** (Plots) : Ventana que presenta los gráficos construidos
+8. **Paquetes** (Packages) : Ventana que permite instalar los paquetes requeridos
+9. **Ayudas** (Help) : Ventana en la que podemos pedir ayuda sobre las sintaxis de funciones
 
 
 <br/><br/>
@@ -132,6 +139,8 @@ A manera de introducción a  continuación se relacionan algunas ayudas para la 
 
 <br/>
 
+<center>
+**Tabla 3.1**  Tipos de objetos 
 
 | Objeto      | tipos                                          | permite varios tipos? |
 |:------------|:-----------------------------------------------|:----------------------|
@@ -146,7 +155,7 @@ A manera de introducción a  continuación se relacionan algunas ayudas para la 
 <sub>
 Tomado de: [R para principiantes](https://bookdown.org/jboscomendoza/r-principiantes4/) 
 </sub>
-
+</center>
 
 
 
@@ -361,6 +370,11 @@ temperatura=ts(x,freq=12,start=c(1981,1))  # <<-
 
 #  <span style="color:#034a94">**Operadores en R**</span>
 
+<br/>
+
+<center>
+**Tabla 3.2**  Operadores lógicos
+
 |      |Aritméticos         |      | Comparativos       |        | Lógicos     |
 |:----:|:-------------------|:----:|:-------------------|:------:|:------------|
 |  +   | adición            | <    | menor que          | !x     | NO lógico   |
@@ -374,7 +388,7 @@ temperatura=ts(x,freq=12,start=c(1981,1))  # <<-
 <sub>
 Tomado de : [R para principiantes](https://bookdown.org/jboscomendoza/r-principiantes4/)
 </sub>
-
+</center>
 
 <br/><br/><br/>
 

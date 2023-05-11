@@ -27,20 +27,24 @@ La instalación de paquetes se puede hacer de dos formas :
 
 #### 1. Utilizando la ventana **Packages** ubicada en la parte inferior derecha de RStudio
 
-
-```{r, echo=FALSE, out.width="60%", fig.align = "left"}
+<center>
+```{r, echo=FALSE, out.width="60%", fig.align = "center"}
 knitr::include_graphics("img/install_package1.png")
 ```
-
+**Figura 3.3** Ventana Packages - instalación de paquetes
+</center>
 
 <br/><br/>
 
-#### 2. Digitando en la consola 
+#### 2. Digitando directamente en la consola de R 
 
-
-```{r, echo=FALSE, out.width="50%", fig.align = "left"}
+<center>
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/install1.png")
 ```
+
+**Figura 3.4** Ventana Terminal - función install.packages
+</center>
 
 <br/><br/>
 
@@ -55,10 +59,13 @@ devtools::install_github("dgonxalex80/paqueteNIV")
 <br/><br/>
 
 
-## <span style="color:#034a94">**Paquetes más utilizados en Ciencia de Datos**</span>
+## <span style="color:#034a94">**Paquetes algunos utilizados en Ciencia de Datos**</span>
 
 <br/><br/>
 
+<center>
+**Tabla 3.3**  Paquetes utilizados en Ciencia de Datos 
+<br/>
 
 |    paquete   |                 |  descripción                                                            |
 |:-------------|:----------------|:------------------------------------------------------------------------|
@@ -84,6 +91,8 @@ devtools::install_github("dgonxalex80/paqueteNIV")
 |xaringan      |      | creación de presentaciones HTML5                                        |
 |rmarkdown     |      | crear documento desde R                                                 |
 |paqueteNIV    |      | paquete del curso Nivelatorio de Estadística                            |
+
+</center>
 
 <br/><br/>
 

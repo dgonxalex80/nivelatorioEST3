@@ -9,27 +9,48 @@ css: style.css
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
 
+<br/><br/>
 
 Una de las actividades principales al desarrollar proyectos en Ciencia de Datos ademas de los procesos de recolección y ajuste de datos y modelación consiste en poder comunicar de manera adecuada los resultados. Para ellos existen muchas posibilidades como pueden ser : artículos, libros, sitios web, posters, presentaciones y blogs entre otros 
 
 Normalmente los procesos de importar, ajuste de los datos, la modelación, la representación gráfica se hace en programas diferentes a los que se utilizan para su publicación generando mas tiempo en en el proceso de comunicación pero haciendo popular el Ctrl+C , Ctrl+V
 
+<br/>
 
 ```{r, echo=FALSE, out.width="10%", fig.align = "center"}
 knitr::include_graphics("img/ctrlCV.png")
 ```
+  
 
+<br/><br/>
 
+<div class="row">
+  <div class="col-sm-2">
+  
 
-```{r, echo=FALSE, out.width="10%", fig.align ='left'}
+```{r, echo=FALSE, fig.align ='left'}
 knitr::include_graphics("img/Rmd.jpeg")
 ```
+</div>
+<div class="col-sm-10">
 
 El paquete rmarkdown junto a otros como : `knitr`, `bookdown`, `xaringan`, `blogdown`, entre otros permiten la construcción de documentos para comunicar los resultados obtenidos en un proceso 
 
+</div>
+</div>
+
+
+
+<br/><br/>
+
+<center>
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/rmarkdown_universe.jpg")
 ```
+<br/>
+**Figura 3.5**  Interacción RStudio, Markdown , knitr para la construcción de documentos 
+</center>
+
 <br/><br/>
 
 ## <span style="color:#034a94">**Formato Rmd**</span>
@@ -40,18 +61,25 @@ Para asceder a una plantilla Rmd ingresamos por :
 
 File / New File / R Marckdown ...
 
+<center>
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/Rmd1.png")
 ```
+<br/>
+**Figura 3.6** Menú de documentos en RStudio
+</center>
 
 <br/>
 
 Se nos depliega una ventana donde podemos colocar el nombre del documento 
 
+<center>
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/Rmd2.png")
 ```
-
+<br/>
+**Figura 3.7** Ventana New RMarkdown para la creación de documentos
+</center>
 <br/>
 
 En esta ventana se no indica que la salida puede estar en formato y sus respectivos requerimientos:
@@ -67,10 +95,18 @@ Ademas de estos documentos existen plantillas que se activan al instalar paquete
 
 Es recomendable crear un proyecto al inicio con el fin de que todos los códigos, imágenes y ademas archivos queden asociados a una carpeta de tal forma que estén disponibles cuando se active el proyecto
 
+<br/>
 
+<center>
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/Project1.png")
 ```
+<br/>
+**Figura 3.8** Ventana New Project para la construcción de proyectos 
+</center>
+
+
+<br><br/>
 
 Presentando tres opciones:
 
@@ -97,10 +133,15 @@ Los archivos creados a partir de la secuencia : `File / New File / R Marckdown .
 El lenguaje [Markdown](https://en.wikipedia.org/wiki/Markdown) es incorporado en RStudio mediante archivos .Rmd  y permite la escritura HTML, TeX. Tambien permite la creación de bloques intermedios donde se procesa código de : [R](https://www.r-project.org/), [Bash](https://es.wikipedia.org/wiki/Bash), [D3.js](https://en.wikipedia.org/wiki/D3.js), [Python](https://www.python.org/), [Rcpp](https://www.rcpp.org/),
 [SQL](https://es.wikipedia.org/wiki/SQL) y [Stan](https://mc-stan.org/)
 
+<br/><br/>
 
+<center>
 ```{r, echo=FALSE, out.width="90%", fig.align = "center"}
 knitr::include_graphics("img/Rmd4.png")
 ```
+<br/>
+**Figura 3.9** Ventana para la creación de bloque de programación
+</center>
 
 <br/><br/>
 
@@ -112,26 +153,45 @@ knitr::include_graphics("img/Rmd4.png")
 
 Es fácil construir un libro en Rmd : File / New Project.. / New Directory /  Book project using bookdown
 
-
+<center>
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/book1.png")
 ```
+<br/>
+**Figura 3.10** Ventana para la creación de proyectos
+</center>
+
+<br/><br/>
 
 El proceso anterior crea un nuevo proyecto llamado **Libro** que contiene varios archivos
 
 <br/><br/>
 
+
+<center>
 ```{r, echo=FALSE, out.width="60%", fig.align = "center"}
 knitr::include_graphics("img/libro1.png")
 ```
+<br/>
+**Figura 3.11** Ventana de archivos generados por plantilla bookdown
+</center>
+
+<br/><br/>
 
 Para procesar el libro convirtiéndolo en formato HTML o pdf se utiliza el botón Build Book ubicado en la ventana Build
 
 <br/><br/>
 
+<center>
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 knitr::include_graphics("img/libro2.png")
 ```
+<br/>
+**Figura 3.12** Documento en formato libro 
+</center>
+
+
+<br/><br/>
 
 Los cambios que se generen en los archivos de la plantilla quedarán realizados en el libro
 
@@ -139,10 +199,6 @@ Los cambios que se generen en los archivos de la plantilla quedarán realizados 
 
 <br/><br/>
 
-### <span style="color:#FF7F00"> **Ejemplo**</span> 
-
-<br/>
-
-[**Big Book of R**](https://www.bigbookofr.com/index.html)
-
-
+<center>
+[<img src="img/BigBook.png" alt="Big Book">](https://www.bigbookofr.com/index.html)
+</center>

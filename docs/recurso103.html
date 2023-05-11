@@ -272,6 +272,7 @@ $(document).ready(function () {
 </div>
 
 
+<p><br/><br/></p>
 <p>Una de las actividades principales al desarrollar proyectos en
 Ciencia de Datos ademas de los procesos de recolección y ajuste de datos
 y modelación consiste en poder comunicar de manera adecuada los
@@ -282,24 +283,44 @@ otros</p>
 modelación, la representación gráfica se hace en programas diferentes a
 los que se utilizan para su publicación generando mas tiempo en en el
 proceso de comunicación pero haciendo popular el Ctrl+C , Ctrl+V</p>
+<p><br/></p>
 <p><img src="img/ctrlCV.png" width="10%" style="display: block; margin: auto;" /></p>
-<p><img src="img/Rmd.jpeg" width="10%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><br/><br/></p>
+<div class="row">
+<div class="col-sm-2">
+<p><img src="img/Rmd.jpeg" width="106" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
+<div class="col-sm-10">
 <p>El paquete rmarkdown junto a otros como : <code>knitr</code>,
 <code>bookdown</code>, <code>xaringan</code>, <code>blogdown</code>,
 entre otros permiten la construcción de documentos para comunicar los
 resultados obtenidos en un proceso</p>
-<p><img src="img/rmarkdown_universe.jpg" width="100%" style="display: block; margin: auto;" />
-<br/><br/></p>
+</div>
+</div>
+<p><br/><br/></p>
+<center>
+<img src="img/rmarkdown_universe.jpg" width="100%" style="display: block; margin: auto;" />
+<br/> <strong>Figura 3.5</strong> Interacción RStudio, Markdown , knitr
+para la construcción de documentos
+</center>
+<p><br/><br/></p>
 <div id="formato-rmd" class="section level2">
 <h2><span style="color:#034a94"><strong>Formato Rmd</strong></span></h2>
 <p>Para asceder a una plantilla Rmd ingresamos por :</p>
 <p><br/></p>
 <p>File / New File / R Marckdown …</p>
-<p><img src="img/Rmd1.png" width="50%" style="display: block; margin: auto;" /></p>
+<center>
+<img src="img/Rmd1.png" width="50%" style="display: block; margin: auto;" />
+<br/> <strong>Figura 3.6</strong> Menú de documentos en RStudio
+</center>
 <p><br/></p>
 <p>Se nos depliega una ventana donde podemos colocar el nombre del
 documento</p>
-<p><img src="img/Rmd2.png" width="50%" style="display: block; margin: auto;" /></p>
+<center>
+<img src="img/Rmd2.png" width="50%" style="display: block; margin: auto;" />
+<br/> <strong>Figura 3.7</strong> Ventana New RMarkdown para la creación
+de documentos
+</center>
 <p><br/></p>
 <p>En esta ventana se no indica que la salida puede estar en formato y
 sus respectivos requerimientos:</p>
@@ -318,7 +339,13 @@ instalar paquetes como :</p>
 <p>Es recomendable crear un proyecto al inicio con el fin de que todos
 los códigos, imágenes y ademas archivos queden asociados a una carpeta
 de tal forma que estén disponibles cuando se active el proyecto</p>
-<p><img src="img/Project1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><br/></p>
+<center>
+<img src="img/Project1.png" width="100%" style="display: block; margin: auto;" />
+<br/> <strong>Figura 3.8</strong> Ventana New Project para la
+construcción de proyectos
+</center>
+<p><br><br/></p>
 <p>Presentando tres opciones:</p>
 <ul>
 <li><p><strong>New Directory</strong> : Cuando creamos un nuevo
@@ -353,7 +380,12 @@ href="https://www.python.org/">Python</a>, <a
 href="https://www.rcpp.org/">Rcpp</a>, <a
 href="https://es.wikipedia.org/wiki/SQL">SQL</a> y <a
 href="https://mc-stan.org/">Stan</a></p>
-<p><img src="img/Rmd4.png" width="90%" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
+<center>
+<img src="img/Rmd4.png" width="90%" style="display: block; margin: auto;" />
+<br/> <strong>Figura 3.9</strong> Ventana para la creación de bloque de
+programación
+</center>
 <p><br/><br/></p>
 </div>
 <div id="plantilla-para-libro" class="section level2">
@@ -362,24 +394,35 @@ libro</strong></span></h2>
 <p><br/></p>
 <p>Es fácil construir un libro en Rmd : File / New Project.. / New
 Directory / Book project using bookdown</p>
-<p><img src="img/book1.png" width="100%" style="display: block; margin: auto;" /></p>
+<center>
+<img src="img/book1.png" width="100%" style="display: block; margin: auto;" />
+<br/> <strong>Figura 3.10</strong> Ventana para la creación de proyectos
+</center>
+<p><br/><br/></p>
 <p>El proceso anterior crea un nuevo proyecto llamado
 <strong>Libro</strong> que contiene varios archivos</p>
 <p><br/><br/></p>
-<p><img src="img/libro1.png" width="60%" style="display: block; margin: auto;" /></p>
+<center>
+<img src="img/libro1.png" width="60%" style="display: block; margin: auto;" />
+<br/> <strong>Figura 3.11</strong> Ventana de archivos generados por
+plantilla bookdown
+</center>
+<p><br/><br/></p>
 <p>Para procesar el libro convirtiéndolo en formato HTML o pdf se
 utiliza el botón Build Book ubicado en la ventana Build</p>
 <p><br/><br/></p>
-<p><img src="img/libro2.png" width="70%" style="display: block; margin: auto;" /></p>
+<center>
+<img src="img/libro2.png" width="70%" style="display: block; margin: auto;" />
+<br/> <strong>Figura 3.12</strong> Documento en formato libro
+</center>
+<p><br/><br/></p>
 <p>Los cambios que se generen en los archivos de la plantilla quedarán
 realizados en el libro</p>
 <p><br/><br/></p>
-<div id="ejemplo" class="section level3">
-<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
-<p><br/></p>
-<p><a href="https://www.bigbookofr.com/index.html"><strong>Big Book of
-R</strong></a></p>
-</div>
+<center>
+<a
+href="https://www.bigbookofr.com/index.html"><img src="img/BigBook.png" alt="Big Book"></a>
+</center>
 </div>
 
 
