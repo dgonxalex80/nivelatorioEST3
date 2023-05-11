@@ -306,11 +306,12 @@ ajustes</p></li>
 <strong>Figura 3.1</strong> Ventana Terminal de R
 </center>
 <p><br/><br/><br/></p>
+<p><img src="img/logoRStudio.png" width="20%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><br/><br/></p>
 </div>
 <div id="qué-es-rstudio" class="section level1">
 <h1><span style="color:#034a94"><strong>¿Qué es
 RStudio?</strong></span></h1>
-<p><img src="img/logoRStudio.png" width="20%" style="display: block; margin: auto auto auto 0;" /></p>
 <p>Esta interfaz o IDE que integra un conjunto de herramientas y
 ventanas que facilitan el trabajo con R a sus usuarios</p>
 <p>Esta conformada por varias ventana como se muestra en la siguiente
@@ -447,7 +448,8 @@ principiantes</a> </sub>
 </div>
 <div id="vector" class="section level2">
 <h2><span style="color:#034a94"><strong>vector</strong></span></h2>
-<p>Arreglo unidimensional de valores, caracteres o cadenas</p>
+<p>Arreglo unidimensional de valores, caracteres o cadenas, todos del
+mismo tipo</p>
 <pre>
 x=c(1,2,3,4,5)    
 </pre>
@@ -672,26 +674,20 @@ rep(x,                # objeto a replicar
 </pre>
 <p><br/></p>
 </div>
-<div id="ejemplo" class="section level3">
-<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
+<div id="ejemplos" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplos</strong></span></h3>
 <pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
 rep(vector, times=4)</code></pre>
 <pre>
 [1] "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno"  "dos"  "tres"
 </pre>
 <p><br/></p>
-</div>
-<div id="ejemplo-1" class="section level3">
-<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
 rep(vector, each=4)</code></pre>
 <pre>
 [1] "uno"  "uno"  "uno"  "uno"  "dos"  "dos"  "dos"  "dos"  "tres" "tres" "tres" "tres"
 </pre>
 <p><br/></p>
-</div>
-<div id="ejemplo-2" class="section level3">
-<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
 rep(vector, times=4,  length.out=7)</code></pre>
 <pre>
@@ -708,27 +704,22 @@ seq(from=1,             # valor inicial
     length.out=NULL,    # longitud del secuencia   
     along.with=NULL)    # longitd del vector
 </pre>
+<p><br/></p>
 </div>
-<div id="ejemplo-3" class="section level3">
-<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
+<div id="ejemplos-1" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplos</strong></span></h3>
 <p>Secuencia de números enteros del 1 al 20</p>
 <pre class="r"><code>seq(20)    # equivalente a 1:20</code></pre>
 <pre>
 [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
 </pre>
 <p><br/></p>
-</div>
-<div id="ejemplo-4" class="section level3">
-<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Secuencia de números pares entre el 1 y el 20</p>
 <pre class="r"><code>seq(2,20,2)</code></pre>
 <pre>
 [1]  2  4  6  8 10 12 14 16 18 20
 </pre>
 <p><br/></p>
-</div>
-<div id="ejemplo-5" class="section level3">
-<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Secuencia de números del 0 al 1 con incrementos de 0.1</p>
 <pre class="r"><code>seq(0, 1, 0.1)</code></pre>
 <pre>
@@ -742,9 +733,10 @@ seq(from=1,             # valor inicial
 round(x,             # valor  
       digits = 0)    # nmero de digitos
 </pre>
+<p><br/></p>
 </div>
-<div id="ejemplo-6" class="section level3">
-<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
+<div id="ejemplos-2" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplos</strong></span></h3>
 <p>Aprimar el valor de <span class="math inline">\(\pi\)</span> a 3
 decimales</p>
 <pre class="r"><code>pi</code></pre>
@@ -760,8 +752,9 @@ decimales</p>
 <div id="trunc" class="section level3">
 <h3><span style="color:#034a94"><strong>trunc()</strong></span></h3>
 <p>Entrega la parte entera de un número</p>
+<p><br/></p>
 </div>
-<div id="ejemplo-7" class="section level3">
+<div id="ejemplo" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Sacar la parte entera de <span class="math inline">\(\pi\)</span></p>
 <pre class="r"><code>trunc(pi)</code></pre>

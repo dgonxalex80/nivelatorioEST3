@@ -30,7 +30,7 @@ Se utilizarán tutoriales que permitirán poner a prueba tus conocimientos, por 
 
 <br/><br/>
 
-### <span style="color:#FF7F00">**Instalación de paquetes**</span>
+### <span style="color:#034a94">**Instalación de paquetes**</span>
 
 <br/>
 
@@ -57,6 +57,13 @@ learnr::run_tutorial("tutorialU101", "paqueteNIV")   # carga tutorial 1
 
 <br/><br/>
 
+
+<center>
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/Rmd5.png")
 ```
+<br/>
+**Figura 3.13** Tutorial de R
+
+</center>
+

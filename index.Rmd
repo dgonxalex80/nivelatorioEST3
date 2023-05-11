@@ -54,11 +54,13 @@ knitr::include_graphics("img/Rt.png")
 
 <br/><br/><br/>
 
-# <span style="color:#034a94">**¿Qué es RStudio?**</span>
-
 ```{r, echo=FALSE, out.width="20%", fig.align = "left"}
 knitr::include_graphics("img/logoRStudio.png")
 ```
+
+<br/><br/>
+
+# <span style="color:#034a94">**¿Qué es RStudio?**</span>
 
 Esta interfaz o IDE que integra un conjunto de herramientas y ventanas  que facilitan el trabajo con R a sus usuarios 
 
@@ -167,7 +169,7 @@ A continuación se presentan algunos ejemplos de objetos
 
 ## <span style="color:#034a94">**vector**</span>  
 
-Arreglo unidimensional de valores, caracteres o cadenas
+Arreglo unidimensional de valores, caracteres o cadenas, todos del mismo tipo
 
 <pre>
 x=c(1,2,3,4,5)    
@@ -408,7 +410,7 @@ rep(x,                # objeto a replicar
 
 <br/>
 
-### <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplos**</span>
 
 ```{r, eval=FALSE}
 vector= c("uno", "dos", "tres")
@@ -421,7 +423,7 @@ rep(vector, times=4)
 
 <br/>
 
-### <span style="color:#FF7F00"> **Ejemplo**</span>
+
 
 ```{r, eval=FALSE}
 vector= c("uno", "dos", "tres")
@@ -434,7 +436,6 @@ rep(vector, each=4)
 
 <br/>
 
-### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 ```{r, eval=FALSE}
 vector= c("uno", "dos", "tres")
@@ -458,7 +459,9 @@ seq(from=1,             # valor inicial
 </pre>
 
 
-### <span style="color:#FF7F00"> **Ejemplo**</span>
+<br/>
+
+### <span style="color:#FF7F00"> **Ejemplos**</span>
 
 Secuencia de números enteros del 1 al 20
 
@@ -471,7 +474,6 @@ seq(20)    # equivalente a 1:20
 
 <br/>
 
-### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Secuencia de números pares entre el 1 y el 20
 
@@ -483,8 +485,6 @@ seq(2,20,2)
 </pre>
 
 <br/>
-
-### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Secuencia de números del 0 al 1 con incrementos de 0.1
 ```{r, eval=FALSE}
@@ -503,7 +503,9 @@ round(x,             # valor
       digits = 0)    # nmero de digitos
 </pre>
 
-### <span style="color:#FF7F00"> **Ejemplo**</span>
+<br/>
+
+### <span style="color:#FF7F00"> **Ejemplos**</span>
 
 Aprimar el valor de $\pi$ a 3 decimales
 
@@ -523,6 +525,8 @@ round(pi,3)    # aproxima a 3 decimales
 ###  <span style="color:#034a94">**trunc()**</span>
 
 Entrega la parte entera de un número
+
+<br/>
 
 ### <span style="color:#FF7F00"> **Ejemplo**</span>
 
