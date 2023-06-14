@@ -9,4 +9,8 @@ navbar:
       href: recurso103.html
     - text: "Uso de tutoriales"
       href: recurso104.html
+    - text: "Mezclas de bases"
+      href: recurso106.html      
+    - text: "Manipulación de datos"
+      href: recurso107.html      
 

@@ -12,7 +12,7 @@
 <meta name="author" content="Nivelatorio de Estadística" />
 
 
-<title> Documentos Rmarkdown</title>
+<title> Manipulación y transformación de datos</title>
 
 <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -272,163 +272,89 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore"><span style="color:#034a94">
-<strong>Documentos Rmarkdown</strong></span></h1>
+<strong>Manipulación y transformación de datos</strong></span></h1>
 <h4 class="author">Nivelatorio de Estadística</h4>
 
 </div>
 
 
-<p><br/><br/></p>
-<p>Una de las actividades principales al desarrollar proyectos en
-Ciencia de Datos ademas de los procesos de recolección y ajuste de datos
-y modelación consiste en poder comunicar de manera adecuada los
-resultados. Para ellos existen muchas posibilidades como pueden ser :
-artículos, libros, sitios web, posters, presentaciones y blogs entre
-otros</p>
-<p>Normalmente los procesos de importar, ajuste de los datos, la
-modelación, la representación gráfica se hace en programas diferentes a
-los que se utilizan para su publicación generando mas tiempo en en el
-proceso de comunicación pero haciendo popular el Ctrl+C , Ctrl+V</p>
-<p><br/></p>
-<p><img src="img/ctrlCV.png" width="10%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
-<div class="row">
-<div class="col-sm-2">
-<p><img src="img/Rmd.jpeg" width="106" style="display: block; margin: auto auto auto 0;" /></p>
-</div>
-<div class="col-sm-10">
-<p>El paquete rmarkdown junto a otros como : <code>knitr</code>,
-<code>bookdown</code>, <code>xaringan</code>, <code>blogdown</code>,
-entre otros permiten la construcción de documentos para comunicar los
-resultados obtenidos en un proceso</p>
-</div>
-</div>
-<p><br/><br/></p>
-<center>
-<img src="img/rmarkdown_universe.jpg" width="100%" style="display: block; margin: auto;" />
-<br/> <strong>Figura 3.5</strong> Interacción RStudio, Markdown , knitr
-para la construcción de documentos
-</center>
-<p><br/><br/></p>
-<div id="formato-rmd" class="section level2">
-<h2><span style="color:#034a94"><strong>Formato Rmd</strong></span></h2>
-<p>Para asceder a una plantilla Rmd ingresamos por :</p>
-<p><br/></p>
-<p>File / New File / R Marckdown …</p>
-<center>
-<img src="img/Rmd1.png" width="50%" style="display: block; margin: auto;" />
-<br/> <strong>Figura 3.6</strong> Menú de documentos en RStudio
-</center>
-<p><br/></p>
-<p>Se nos depliega una ventana donde podemos colocar el nombre del
-documento</p>
-<center>
-<img src="img/Rmd2.png" width="50%" style="display: block; margin: auto;" />
-<br/> <strong>Figura 3.7</strong> Ventana New RMarkdown para la creación
-de documentos
-</center>
-<p><br/></p>
-<p>En esta ventana se no indica que la salida puede estar en formato y
-sus respectivos requerimientos:</p>
+<p><br/><br/><br/></p>
+<p>El paquete <strong>dplyr</strong> de R proporciona varias funciones
+para manipular y transformar datos enmarcados en data frames. Dentro de
+las funciones mas usadas están:</p>
 <ul>
-<li>HTML</li>
-<li>PDF<br />
-</li>
-<li>Word</li>
-</ul>
-<p>Ademas de estos documentos existen plantillas que se activan al
-instalar paquetes como :</p>
-<ul>
-<li>xarimgan que permiote crear presentaciones</li>
-<li>bookdown para crear libros</li>
-</ul>
-<p>Es recomendable crear un proyecto al inicio con el fin de que todos
-los códigos, imágenes y ademas archivos queden asociados a una carpeta
-de tal forma que estén disponibles cuando se active el proyecto</p>
-<p><br/></p>
-<center>
-<img src="img/Project1.png" width="100%" style="display: block; margin: auto;" />
-<br/> <strong>Figura 3.8</strong> Ventana New Project para la
-construcción de proyectos
-</center>
-<p><br><br/></p>
-<p>Presentando tres opciones:</p>
-<ul>
-<li><p><strong>New Directory</strong> : Cuando creamos un nuevo
-proyecto. Esta opción presenta varias plantillas</p></li>
-<li><p><strong>Existing Directory</strong> : Cuando tenemos un
-directorio ya creado y queremos ubicar nuestro proyecto en el</p></li>
-<li><p><strong>Version Control</strong> : Esta opción se utiliza cuando
-queremos clonar un repositorio previamente creado en GitHub</p></li>
+<li><strong>summarize</strong>,</li>
+<li><strong>mutate</strong>,</li>
+<li><strong>select</strong> y</li>
+<li><strong>filter</strong>:</li>
 </ul>
 <p><br/><br/></p>
-<p><br/></p>
-</div>
-<div id="sintaxis-rmd" class="section level2">
-<h2><span style="color:#034a94"><strong>Sintaxis
-Rmd</strong></span></h2>
+<p>Para ilustrar su uso tomaremos una muestra de tamaño 20 de la base
+Titanic de <a
+href="https://www.kaggle.com/datasets/yasserh/titanic-dataset"><em>kaggle</em></a></p>
+<p><img src="img/titanic.png" width="35%" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
-<p>Los archivos creados a partir de la secuencia :
-<code>File / New File / R Marckdown ...</code> presenta una plantilla
-que ayuda a entender la sintaxis empleada en Rmd, la cual se puede
-mezclar con otros lenguajes como : <code>LaTeX</code>,
-<code>HTML</code></p>
-<p><a href="https://rmarkdown.rstudio.com/lesson-15.HTML">R
-Markdown::HOJA RESUMEN</a></p>
-<p>El lenguaje <a
-href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> es
-incorporado en RStudio mediante archivos .Rmd y permite la escritura
-HTML, TeX. Tambien permite la creación de bloques intermedios donde se
-procesa código de : <a href="https://www.r-project.org/">R</a>, <a
-href="https://es.wikipedia.org/wiki/Bash">Bash</a>, <a
-href="https://en.wikipedia.org/wiki/D3.js">D3.js</a>, <a
-href="https://www.python.org/">Python</a>, <a
-href="https://www.rcpp.org/">Rcpp</a>, <a
-href="https://es.wikipedia.org/wiki/SQL">SQL</a> y <a
-href="https://mc-stan.org/">Stan</a></p>
+<div id="summarize" class="section level3">
+<h3><strong>summarize</strong>:</h3>
+<p>Esta función se utiliza para resumir los datos y calcular
+estadísticas agregadas. Permite calcular valores resumidos como la suma,
+promedio, mediana, mínimo, máximo, entre otros indicadores, en función
+de grupos o condiciones específicas.</p>
 <p><br/><br/></p>
-<center>
-<img src="img/Rmd4.png" width="90%" style="display: block; margin: auto;" />
-<br/> <strong>Figura 3.9</strong> Ventana para la creación de bloque de
-programación
-</center>
+<p><img src="img/manipulacion1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
+<pre class="r"><code>library(dplyr)
+titanic %&gt;%
+  summarize(proporcion_supervivencia = mean(survived))</code></pre>
 <p><br/><br/></p>
 </div>
-<div id="plantilla-para-libro" class="section level2">
-<h2><span style="color:#034a94"><strong>Plantilla para
-libro</strong></span></h2>
-<p><br/></p>
-<p>Es fácil construir un libro en Rmd : File / New Project.. / New
-Directory / Book project using bookdown</p>
-<center>
-<img src="img/book1.png" width="100%" style="display: block; margin: auto;" />
-<br/> <strong>Figura 3.10</strong> Ventana para la creación de proyectos
-</center>
+<div id="mutate" class="section level3">
+<h3><strong>mutate</strong>:</h3>
+<p>La función mutate se utiliza para crear nuevas variables en un data
+frame, basándose en variables existentes o aplicando transformaciones a
+las variables existentes. Puede usarse para realizar cálculos en
+variables existentes, agregar valores calculados o transformar datos de
+diversas maneras.</p>
 <p><br/><br/></p>
-<p>El proceso anterior crea un nuevo proyecto llamado
-<strong>Libro</strong> que contiene varios archivos</p>
+<p><img src="img/manipulacion2.png" width="80%" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
-<center>
-<img src="img/libro1.png" width="60%" style="display: block; margin: auto;" />
-<br/> <strong>Figura 3.11</strong> Ventana de archivos generados por
-plantilla bookdown
-</center>
+<pre class="r"><code>titanic2 &lt;- titanic %&gt;%
+  mutate(grup = case_when(
+    age &lt;= 18 ~ &quot;joven&quot;,
+    age &lt;= 50 ~ &quot;adulto&quot;,
+    TRUE ~ &quot;mayor&quot;
+  ))</code></pre>
 <p><br/><br/></p>
-<p>Para procesar el libro convirtiéndolo en formato HTML o pdf se
-utiliza el botón Build Book ubicado en la ventana Build</p>
+</div>
+<div id="select" class="section level3">
+<h3><strong>select</strong>:</h3>
+<p>Esta función se utiliza para seleccionar un subconjunto de variables
+de un data frame. Puedes elegir variables específicas o excluir
+variables no deseadas. La función select también permite realizar
+transformaciones en las variables seleccionadas, como cambiar el nombre
+de las variables o calcular nuevas variables.</p>
 <p><br/><br/></p>
-<center>
-<img src="img/libro2.png" width="70%" style="display: block; margin: auto;" />
-<br/> <strong>Figura 3.12</strong> Documento en formato libro
-</center>
+<blockquote>
+
+</blockquote>
+<p><img src="img/manipulacion3.png" width="80%" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
-<p>Los cambios que se generen en los archivos de la plantilla quedarán
-realizados en el libro</p>
+<pre class="r"><code>titanic3 &lt;- titanic %&gt;%
+  select(id, survived)</code></pre>
 <p><br/><br/></p>
-<center>
-<a
-href="https://www.bigbookofr.com/index.html"><img src="img/BigBook.png" alt="Big Book"></a>
-</center>
+</div>
+<div id="filter" class="section level3">
+<h3><strong>filter</strong>:</h3>
+<p>La función filter se utiliza para filtrar filas de un data frame en
+función de condiciones específicas. Puedes establecer condiciones
+lógicas para seleccionar solo los registros (filas) que cumplan con
+dichas condiciones. Por ejemplo, puedes filtrar los registros (filas)
+que cumplen una condición numérica, de texto o basada en una fecha.</p>
+<p><br/><br/></p>
+<p><img src="img/manipulacion4.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
+<pre class="r"><code>titanic4 &lt;- titanic %&gt;%
+  filter(sex == &quot;female&quot;, age &gt;= 30)</code></pre>
 </div>
 
 
