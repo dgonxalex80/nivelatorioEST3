@@ -240,18 +240,21 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Introducción a R</a>
+      <a class="navbar-brand" href="index.html">Introducción</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="recurso102.html">Paquetes en R</a>
+  <a href="recurso102.html">Paquetes</a>
 </li>
 <li>
-  <a href="recurso103.html">Documentos Rmd</a>
+  <a href="recurso103.html">Documentos</a>
 </li>
 <li>
-  <a href="recurso104.html">Uso de tutoriales</a>
+  <a href="recurso104.html">Tutoriales</a>
+</li>
+<li>
+  <a href="recurso108.html">Importar datos</a>
 </li>
 <li>
   <a href="recurso106.html">Mezclas de bases</a>
@@ -301,11 +304,11 @@ estadísticas agregadas. Permite calcular valores resumidos como la suma,
 promedio, mediana, mínimo, máximo, entre otros indicadores, en función
 de grupos o condiciones específicas.</p>
 <p><br/><br/></p>
-<p><img src="img/manipulacion1.png" width="80%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
 <pre class="r"><code>library(dplyr)
 titanic %&gt;%
   summarize(proporcion_supervivencia = mean(survived))</code></pre>
+<p><br/><br/></p>
+<p><img src="img/manipulacion1.png" width="85%" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 </div>
 <div id="mutate" class="section level3">
@@ -316,14 +319,14 @@ las variables existentes. Puede usarse para realizar cálculos en
 variables existentes, agregar valores calculados o transformar datos de
 diversas maneras.</p>
 <p><br/><br/></p>
-<p><img src="img/manipulacion2.png" width="80%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
 <pre class="r"><code>titanic2 &lt;- titanic %&gt;%
   mutate(grup = case_when(
-    age &lt;= 18 ~ &quot;joven&quot;,
+    age &lt;= 18 ~ &quot;jóven&quot;,
     age &lt;= 50 ~ &quot;adulto&quot;,
     TRUE ~ &quot;mayor&quot;
   ))</code></pre>
+<p><br/><br/></p>
+<p><img src="img/manipulacion2.png" width="90%" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 </div>
 <div id="select" class="section level3">
@@ -334,13 +337,10 @@ variables no deseadas. La función select también permite realizar
 transformaciones en las variables seleccionadas, como cambiar el nombre
 de las variables o calcular nuevas variables.</p>
 <p><br/><br/></p>
-<blockquote>
-
-</blockquote>
-<p><img src="img/manipulacion3.png" width="80%" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>titanic4 &lt;- titanic %&gt;%
+  filter(sex == &quot;female&quot;, age &gt;= 30)</code></pre>
 <p><br/><br/></p>
-<pre class="r"><code>titanic3 &lt;- titanic %&gt;%
-  select(id, survived)</code></pre>
+<p><img src="img/manipulacion3.png" width="88%" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 </div>
 <div id="filter" class="section level3">
@@ -351,10 +351,10 @@ lógicas para seleccionar solo los registros (filas) que cumplan con
 dichas condiciones. Por ejemplo, puedes filtrar los registros (filas)
 que cumplen una condición numérica, de texto o basada en una fecha.</p>
 <p><br/><br/></p>
-<p><img src="img/manipulacion4.png" width="80%" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>titanic3 &lt;- titanic %&gt;%
+  select(id, survived)</code></pre>
 <p><br/><br/></p>
-<pre class="r"><code>titanic4 &lt;- titanic %&gt;%
-  filter(sex == &quot;female&quot;, age &gt;= 30)</code></pre>
+<p><img src="img/manipulacion4.png" width="75%" style="display: block; margin: auto;" /></p>
 </div>
 
 

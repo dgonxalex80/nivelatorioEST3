@@ -1,14 +1,16 @@
 name: " "
 output_dir: "docs"
 navbar:
-  title: "Introducción a R"
+  title: "Introducción"
   left:
-    - text: "Paquetes en R"
+    - text: "Paquetes"
       href: recurso102.html
-    - text: "Documentos Rmd"
+    - text: "Documentos"
       href: recurso103.html
-    - text: "Uso de tutoriales"
+    - text: "Tutoriales"
       href: recurso104.html
+    - text: "Importar datos"
+      href: recurso108.html        
     - text: "Mezclas de bases"
       href: recurso106.html      
     - text: "Manipulación de datos"

@@ -69,28 +69,29 @@ devtools::install_github("dgonxalex80/paqueteNIV")
 
 |    paquete   |                 |  descripción                                                            |
 |:-------------|:----------------|:------------------------------------------------------------------------|
-|tidyverse     |                 | colección de paquetes empleados en Ciencia de Datos                     |
-|              | ggplot2         | crear gráficos a partir de capas o gramática de gráficos                | 
-|              | tibble          | manejo de bases                                                         |
-|              | tidyr           | crear bases de datos ordenadas                                          |
-|              | readr           | leer archivos de texto plano como .csv                                  |
-|              | purrr           | trabajar con vectores y funciones                                       |
-|              | dplyr           | manipular datos : mutar, seleccionar, filtrar, resumir, organizar       |
-|              | stringr         | trabajar con análisis de texto                                          |
-|              | forcats         | trabajar con factores y datos categóricos                               |
-| readxl       |      | leer archivos Excel                                                     |
-| haven        |      | leer archivos SPSS. Stata, SAS                                          |
-| lubridate    |      | fechas y tiempos                                                        |
-| hms          |      | tiempo en horas, minutos, segundos                                      | 
-|summarytools  |      | exploración de datos, resumen descriptivos, tablas de frecuencia        |
-|psych         |      | análisis psicométrico, análisis multivariado                            |
-|agricolae     |      | análisis para investigación agrícola                                    |
-|devtools      |      | desarrollo de paquetes en R                                             |
-|learnr        |      | desarrollo de tutoriales en R                                           |
-|bookdown      |      | escritura de libros, artículos e informes                               |
-|xaringan      |      | creación de presentaciones HTML5                                        |
-|rmarkdown     |      | crear documento desde R                                                 |
-|paqueteNIV    |      | paquete del curso Nivelatorio de Estadística                            |
+|`tidyverse`     |                 | colección de paquetes empleados en Ciencia de Datos                     |
+|              | `ggplot2`         | crear gráficos a partir de capas o gramática de gráficos                | 
+|              | `tibble`          | manejo de bases                                                         |
+|              | `tidyr`           | crear bases de datos ordenadas                                          |
+|              | `readr`           | leer archivos de texto plano como .csv                                  |
+|              | `purrr`           | trabajar con vectores y funciones                                       |
+|              | `dplyr`           | manipular datos : mutar, seleccionar, filtrar, resumir, organizar       |
+|              | `stringr`         | trabajar con análisis de texto                                          |
+|              | `forcats`         | trabajar con factores y datos categóricos                               |
+| `readxl`     |      | leer archivos Excel                                                     |
+| `haven`      |      | leer archivos SPSS. Stata, SAS                                          |
+| `lubridate`  |      | fechas y tiempos                                                        |
+| `hms`        |      | tiempo en horas, minutos, segundos                                      | 
+|`summarytools`|      | exploración de datos, resumen descriptivos, tablas de frecuencia        |
+|`psych`       |      | análisis psicométrico, análisis multivariado                            |
+|`agricolae`   |      | análisis para investigación agrícola                                    |
+|`devtools`    |      | desarrollo de paquetes en R                                             |
+|`learnr`      |      | desarrollo de tutoriales en R                                           |
+|`bookdown`    |      | escritura de libros, artículos e informes                               |
+|`xaringan`    |      | creación de presentaciones HTML5                                        |
+|`rmarkdown`   |      | crear documento desde R                                                 |
+|`paqueteNIV`  |      | paquete del curso Nivelatorio de Estadística                            |
+|              |      |                                                                         |
 
 </center>
 
@@ -102,14 +103,14 @@ devtools::install_github("dgonxalex80/paqueteNIV")
 
 La instrucción `installl.packages(tidyverse)`  instala los paquetes :
 
-* ggplot2 
-* tibble
-* tidyr 
-* readr 
-* purrr 
-* dplyr 
-* stringr
-* forcats
+* `ggplot2` 
+* `tibble`
+* `tidyr` 
+* `readr` 
+* `purrr` 
+* `dplyr` 
+* `stringr`
+* `forcats`
 
 `library(tydyverse)`, los activa 
 </div>
