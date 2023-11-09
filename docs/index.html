@@ -14,7 +14,7 @@
 
 <title> Introducción a R</title>
 
-<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -31,6 +31,7 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
@@ -218,6 +219,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -271,6 +275,14 @@ $(document).ready(function () {
 </div><!--/.navbar -->
 
 <div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
 
 
 
@@ -456,24 +468,31 @@ principiantes</a> </sub>
 <p><br/><br/></p>
 </div>
 <div id="vector" class="section level2">
-<h2><span style="color:#034a94"><strong>vector</strong></span></h2>
+<h2><span style="color:#034A94"><strong>vector</strong></span></h2>
 <p>Arreglo unidimensional de valores, caracteres o cadenas, todos del
 mismo tipo</p>
-<pre>
-x=c(1,2,3,4,5)    
-</pre>
-<pre>
-y=c("Muy regular", "Regular", "Bueno", "Muy bueno", "Excelente")     <i class="fa fa-cloud"></i>
-</pre>
+<div id="ejemplo" class="section level3">
+<h3><span style="color:#FF7F00"><strong>Ejemplo</strong></span></h3>
+<pre class="r"><code>x=c(1,2,3,4,5)  
+x</code></pre>
+<pre><code>[1] 1 2 3 4 5</code></pre>
+<pre class="r"><code>y=c(&quot;Muy regular&quot;, &quot;Regular&quot;, &quot;Bueno&quot;, &quot;Muy bueno&quot;, &quot;Excelente&quot;)    
+y</code></pre>
+<pre><code>[1] &quot;Muy regular&quot; &quot;Regular&quot;     &quot;Bueno&quot;       &quot;Muy bueno&quot;   &quot;Excelente&quot;  </code></pre>
 <p><br/><br/></p>
+</div>
 </div>
 <div id="matriz" class="section level2">
 <h2><span style="color:#034a94"><strong>matriz</strong></span></h2>
 <p>Arreglo bidimensional de valores</p>
-<pre>
-x=1:9                # vector de 9 valores
-m=matrix(x,nrow=3)   # matriz con 3 filas y 3 columnas
-</pre>
+<pre class="r"><code>x=1:9
+
+m=matrix(x,nrow=3)   # &lt;&lt;-
+m</code></pre>
+<pre><code>     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="arrays" class="section level2">
@@ -481,24 +500,44 @@ m=matrix(x,nrow=3)   # matriz con 3 filas y 3 columnas
 <p>Arreglos multimensionales de valores. En el siguiente ejemplo se
 representa un arreglo de 3 matrices 3x3 que conformarían en 3D un cubo
 de datos</p>
-<pre>
-x=1:9
+<pre class="r"><code>x=1:9
 y=10:18
 z=19:27
 
-mn=array(c(x,y),dim=c(3,3,3)) # <<-
-</pre>
+mn=array(c(x,y),dim=c(3,3,3)) # &lt;&lt;-
+mn</code></pre>
+<pre><code>, , 1
+
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+, , 2
+
+     [,1] [,2] [,3]
+[1,]   10   13   16
+[2,]   11   14   17
+[3,]   12   15   18
+
+, , 3
+
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="factores" class="section level2">
 <h2><span style="color:#034a94"><strong>factores</strong></span></h2>
 <p>Vector de variables categóricas, por lo general se utilizan para
 dividir una base en subgrupos</p>
-<pre>
-x=c("rojo", "verde", "azul")
+<pre class="r"><code>x=c(&quot;rojo&quot;, &quot;verde&quot;, &quot;azul&quot;)
 y=rep(x, times=4)
-y=as.factor(y)               # <<-
-</pre>
+y=as.factor(y)               # &lt;&lt;-
+y</code></pre>
+<pre><code> [1] rojo  verde azul  rojo  verde azul  rojo  verde azul  rojo  verde azul 
+Levels: azul rojo verde</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="listas" class="section level2">
@@ -508,9 +547,7 @@ clase guarda valores en diferentes formatos.</p>
 <p>En el siguiente ejemplo se construye un objeto <strong>h</strong> que
 contiene varios elementos dentro de si, todos relacionados con un
 histograma</p>
-<pre>
-h=hist(rnorm(100,25,10)) 
-</pre>
+<pre class="r"><code>h=hist(rnorm(100,45,5), col = &quot;#FF7F00&quot;, main = &quot;Distribución del tiempo de carrera K10&quot;, las=1, xlab = &quot;tiempo en min&quot;, ylab =&quot;frecuencia&quot;) </code></pre>
 <p><img src="index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p><br/><br/></p>
 </div>
@@ -520,9 +557,15 @@ h=hist(rnorm(100,25,10))
 datos. con la función <code>data()</code> se pueden cargar bases de
 datos contenidas en R. <code>data(iris)</code> carga la base iris que
 contiene 150 registros (colomnas) y 5 variables (filas).</p>
-<pre>
-data(iris)
-</pre>
+<pre class="r"><code>data(iris) # carga la data desde un paquete activado
+head(iris) # presenta los primeros 6 registros</code></pre>
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="funciones" class="section level2">
@@ -530,20 +573,21 @@ data(iris)
 <p>Para construir una función utilizamos la palabra
 <code>function</code>, entre paréntesis los valores de entrada y entre
 corchetes la formula que conforma la función. Por ejemplo:</p>
-<p><span class="math display">\[f(x)=\dfrac{1}{(x-1)^{2}}\]</span></p>
-<pre>
-fx=function(x){1/(x-1)^2} # <<-
-fx(100)                   # función evaluada en x=100
-
-[1] 0.0001020304
-</pre>
+<p><span class="math display">\[f(x)=\dfrac{1}{(x-1)^{2}}\]</span>
+$f(100) = ? $</p>
+<pre class="r"><code>fx=function(x){1/(x-1)^2} # &lt;&lt;-
+fx(100)</code></pre>
+<pre><code>[1] 0.0001020304</code></pre>
 <p>En este caso la función es evaluada dentro de un otra función en la
 construcción de un gráfico</p>
 <pre>
 x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
 plot(x, fx(x), type="l", col="#FF7F00", lwd = 5, las=1) # genera grafica
 </pre>
-<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<pre class="r"><code>fx=function(x){1/(x-1)^2} 
+x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
+plot(x, fx(x), type=&quot;l&quot;, col=&quot;#FF7F00&quot;, lwd = 5, las=1) # genera grafica</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p>El siguiente ejemplo construye una función para la realización de un
 gráfico. En este caso los valores de entrada están conformados por un
 vector de datos y un color</p>
@@ -552,18 +596,20 @@ vector de datos y un color</p>
 grafica=function(x,color){
     barplot(x,
     col=color, las=1)
+</pre>
+<pre class="r"><code># funcion definida para la construcción de gráficos
+grafica=function(x,color){
+    barplot(x,
+    col=color, las=1)
 }
 
-y=sample(1:6,100, replace = T)     # generacion de datos - simula lanzamiento de dado
-z=table(y)                         # generacion de tabla de datos
-grafica(z,"#034A94")               # evalúa la función en los datos z y color #034A94 
-</pre>
-<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
-<pre>
-w=round(prop.table(z)*100,2)  # genera datos y construye tabla en porcentaje
-grafica(w,"#0EB0C6")          # evalúa la función con w y color azul
-</pre>
-<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+y=sample(1:6,100, replace = T)  # generacion de datos
+
+z=table(y) # generacion de tabla de datos
+par(mfrow = c(1, 2)) # arma una matrix 1X2 de graficos
+grafica(z,&quot;#034A94&quot;)  # evalúa la función en los datos z y colo rojo
+grafica(z,&quot;#0EB0C6&quot;)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" width="768" /></p>
 <p><br/><br/></p>
 </div>
 <div id="ts" class="section level2">
@@ -571,10 +617,34 @@ grafica(w,"#0EB0C6")          # evalúa la función con w y color azul
 <p>Los objetos <code>ts</code> corresponde a series temporales que están
 compuestos por un inicio, un final y una periodicidad temporal
 regular</p>
-<pre>
-x=rnorm(365, 20,3)
-temperatura=ts(x,freq=12,start=c(1981,1))   # <<-
-</pre>
+<pre class="r"><code>x=round(rnorm(285, 20,3),1) # datos sumulados
+temperatura=ts(x,freq=12,start=c(2000,1))  # &lt;&lt;-
+temperatura</code></pre>
+<pre><code>      Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec
+2000 23.1 19.9 24.5 22.6 17.1 26.4 20.5 18.5 25.8 18.1 21.1 24.1
+2001 19.3 18.0 22.0 21.2 23.7 21.6 17.5 21.5 21.1 20.7 24.4 21.3
+2002 18.1 19.7 22.2 21.3 24.5 16.7 20.8 24.2 18.9 20.1 20.9 17.2
+2003 19.5 18.4 25.6 22.7 25.4 23.3 21.2 18.3 18.0 15.3 11.7 18.6
+2004 23.8 23.4 22.1 20.0 15.9 25.2 25.9 21.5 22.8 12.8 26.0 17.8
+2005 21.3 21.9 18.4 24.9 23.5 21.3 24.3 23.9 20.2 22.1 25.2 17.9
+2006 17.5 18.7 17.6 15.5 20.7 14.6 14.7 18.5 17.3 22.8 19.7 22.9
+2007 17.4 21.8 22.1 20.2 18.1 20.8 22.6 18.0 19.2 21.0 19.3 22.9
+2008 21.0 19.3 19.2 19.9 16.4 15.8 23.3 18.7 15.9 18.9 16.4 17.4
+2009 19.4 24.0 27.1 19.3 25.0 14.7 19.4 16.2 23.8 21.0 20.8 21.6
+2010 19.2 20.3 14.3 17.1 18.0 20.7 20.7 18.6 14.7 17.7 18.6 18.0
+2011 24.3 15.8 18.5 23.4 18.6 18.3 21.2 22.5 18.3 23.5 19.1 14.6
+2012 12.9 23.1 22.4 15.5 18.0 22.4 17.6 21.2 21.7 21.7 24.3 22.2
+2013 20.8 26.0 22.9 17.8 18.5 22.4 19.3 21.3 21.0 18.5 19.5 18.8
+2014 19.7 17.9 22.9 20.3 15.1 16.6 23.8 22.6 14.4 24.3 26.7 17.7
+2015 22.1 19.7 18.9 25.1 17.9 21.8 18.5 19.0 24.5 22.3 17.4 23.8
+2016 25.1 16.2 18.0 21.7 25.3 21.6 19.0 16.1 14.8 21.3 14.7 19.0
+2017 20.9 22.0 16.8 21.4 16.6 22.2 18.4 21.1 21.2 21.5 18.1 17.5
+2018 22.2 17.3 18.9 21.4 19.9 16.6 21.6 18.9 21.5 18.4 19.6 24.2
+2019 30.9 18.0 15.4 18.9 16.7 20.8 18.2 17.9 24.9 19.4 17.4 15.9
+2020 17.5 20.0 22.9 22.1 17.1 21.8 20.3 22.9 18.0 22.5 22.9 16.2
+2021 19.2 19.9 19.5 19.5 16.9 18.9 25.0 24.3 17.3 19.6 15.1 20.9
+2022 18.7 23.0 21.9 18.7 17.3 13.4 17.0 21.1 21.7 15.2 21.6 20.9
+2023 15.0 19.6 22.6 18.6 18.2 28.4 18.3 20.5 19.0               </code></pre>
 <p><br/><br/><br/></p>
 </div>
 </div>
@@ -687,29 +757,25 @@ rep(x,                # objeto a replicar
 <h3><span style="color:#FF7F00"> <strong>Ejemplos</strong></span></h3>
 <pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
 rep(vector, times=4)</code></pre>
-<pre>
-[1] "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno"  "dos"  "tres"
-</pre>
+<pre><code> [1] &quot;uno&quot;  &quot;dos&quot;  &quot;tres&quot; &quot;uno&quot;  &quot;dos&quot;  &quot;tres&quot; &quot;uno&quot;  &quot;dos&quot;  &quot;tres&quot; &quot;uno&quot; 
+[11] &quot;dos&quot;  &quot;tres&quot;</code></pre>
 <p><br/></p>
 <pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
 rep(vector, each=4)</code></pre>
-<pre>
-[1] "uno"  "uno"  "uno"  "uno"  "dos"  "dos"  "dos"  "dos"  "tres" "tres" "tres" "tres"
-</pre>
+<pre><code> [1] &quot;uno&quot;  &quot;uno&quot;  &quot;uno&quot;  &quot;uno&quot;  &quot;dos&quot;  &quot;dos&quot;  &quot;dos&quot;  &quot;dos&quot;  &quot;tres&quot; &quot;tres&quot;
+[11] &quot;tres&quot; &quot;tres&quot;</code></pre>
 <p><br/></p>
 <pre class="r"><code>vector= c(&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;)
 rep(vector, times=4,  length.out=7)</code></pre>
-<pre>
-[1] "uno"  "dos"  "tres" "uno"  "dos"  "tres" "uno" 
-</pre>
+<pre><code>[1] &quot;uno&quot;  &quot;dos&quot;  &quot;tres&quot; &quot;uno&quot;  &quot;dos&quot;  &quot;tres&quot; &quot;uno&quot; </code></pre>
 <p><br/><br/><br/></p>
 </div>
 <div id="seq" class="section level3">
 <h3><span style="color:#034A94"><strong>seq()</strong></span></h3>
 <pre>
-seq(from=1,             # valor inicial  
-    to=1,               # valor final
-    by=1,               # valor incremento
+seq(from=0,             # valor inicial  
+    to=10,               # valor final
+    by=0.5,               # valor incremento
     length.out=NULL,    # longitud del secuencia   
     along.with=NULL)    # longitd del vector
 </pre>
@@ -719,21 +785,17 @@ seq(from=1,             # valor inicial
 <h3><span style="color:#FF7F00"> <strong>Ejemplos</strong></span></h3>
 <p>Secuencia de números enteros del 1 al 20</p>
 <pre class="r"><code>seq(20)    # equivalente a 1:20</code></pre>
-<pre>
-[1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
-</pre>
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<pre class="r"><code>1:20</code></pre>
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
 <p><br/></p>
 <p>Secuencia de números pares entre el 1 y el 20</p>
 <pre class="r"><code>seq(2,20,2)</code></pre>
-<pre>
-[1]  2  4  6  8 10 12 14 16 18 20
-</pre>
+<pre><code> [1]  2  4  6  8 10 12 14 16 18 20</code></pre>
 <p><br/></p>
 <p>Secuencia de números del 0 al 1 con incrementos de 0.1</p>
 <pre class="r"><code>seq(0, 1, 0.1)</code></pre>
-<pre>
-[1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
-</pre>
+<pre><code> [1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0</code></pre>
 <p><br/><br/><br/></p>
 </div>
 <div id="round" class="section level3">
@@ -752,10 +814,6 @@ decimales</p>
 <pre><code>[1] 3.141593</code></pre>
 <pre class="r"><code>round(pi,3)    # aproxima a 3 decimales</code></pre>
 <pre><code>[1] 3.142</code></pre>
-<pre>
-[1] 3.141593
-[1] 3.142
-</pre>
 <p><br/><br/><br/></p>
 </div>
 <div id="trunc" class="section level3">
@@ -763,13 +821,11 @@ decimales</p>
 <p>Entrega la parte entera de un número</p>
 <p><br/></p>
 </div>
-<div id="ejemplo" class="section level3">
+<div id="ejemplo-1" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Sacar la parte entera de <span class="math inline">\(\pi\)</span></p>
 <pre class="r"><code>trunc(pi)</code></pre>
-<pre>
-[1] 3
-</pre>
+<pre><code>[1] 3</code></pre>
 </div>
 </div>
 
@@ -806,6 +862,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

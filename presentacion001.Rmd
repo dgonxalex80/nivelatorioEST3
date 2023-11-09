@@ -1,0 +1,32 @@
+---
+title: "Título de tu presentación"
+subtitle: "Subtítulo de tu presentación"
+author: "Tu nombre"
+date: "Fecha de la presentación"
+output:
+  xaringan::moon_reader:
+    css: ["default", "custom.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+# Título de la diapositiva 1
+
+Contenido de la diapositiva 1
+
+---
+
+# Título de la diapositiva 2
+
+Contenido de la diapositiva 2
+
+---
+
+# Título de la diapositiva 3
+
+Contenido de la diapositiva 3
+
+

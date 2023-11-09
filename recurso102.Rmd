@@ -1,10 +1,11 @@
 ---
 title: <span style="color:#034a94"> **Manejo de paquetes en R**</span>
 author: "Nivelatorio de Estadística"
-output: html_document
-css: style.css
+output:
+  html_document:
+    code_folding: hide
+    css: style.css
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
