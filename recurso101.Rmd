@@ -1,7 +1,6 @@
 ---
-title: "Introducción a R"
+title: <span style="color:#034a94"> **Introducción a R**</span>
 author: "Nivelatorio de Estadística"
-date: "2022"
 output:
   html_document:
     code_folding: hide

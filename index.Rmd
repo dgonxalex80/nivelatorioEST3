@@ -254,6 +254,13 @@ h=hist(rnorm(100,45,5), col = "#FF7F00", main = "Distribución del tiempo de car
 ```
 
 
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "left"}
+knitr::include_graphics("img/lista.png")
+```
+
+
 <br/><br/>
 
 ## <span style="color:#034a94">**data.frames**</span>
@@ -275,7 +282,7 @@ Para construir una función utilizamos la palabra `function`, entre paréntesis 
 
 
 $$f(x)=\dfrac{1}{(x-1)^{2}}$$
-$f(100) = ? $
+$f(100) = ?$
 
 ```{r}
 fx=function(x){1/(x-1)^2} # <<-
@@ -283,19 +290,17 @@ fx(100)
 ```
 
 
-
+<br/>
 
 En este caso la función es evaluada dentro de un otra función en la construcción de un gráfico
 
-<pre>
-x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
-plot(x, fx(x), type="l", col="#FF7F00", lwd = 5, las=1) # genera grafica
-</pre>
+<br/>
 
-```{r tidy=FALSE}
+
+```{r}
 fx=function(x){1/(x-1)^2} 
 x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
-plot(x, fx(x), type="l", col="#FF7F00", lwd = 5, las=1) # genera grafica
+plot(x, fx(x), type="l", col="#FF7F00", lwd = 2, las=1) # genera grafica
 ```
 
 El siguiente ejemplo construye una función para la realización de un gráfico. En este caso los valores de entrada están conformados por un vector de datos y un color
@@ -304,8 +309,8 @@ El siguiente ejemplo construye una función para la realización de un gráfico.
 <pre>
 # funcion definida para la construcción de gráficos
 grafica=function(x,color){
-	barplot(x,
-	col=color, las=1)
+              barplot(x,col=color, las=1)
+              }
 </pre>
 
 
@@ -313,9 +318,8 @@ grafica=function(x,color){
 
 # funcion definida para la construcción de gráficos
 grafica=function(x,color){
-	barplot(x,
-	col=color, las=1)
-}
+	            barplot(x,col=color, las=1)
+              }
 
 y=sample(1:6,100, replace = T)  # generacion de datos
 
@@ -324,10 +328,6 @@ par(mfrow = c(1, 2)) # arma una matrix 1X2 de graficos
 grafica(z,"#034A94")  # evalúa la función en los datos z y colo rojo
 grafica(z,"#0EB0C6")
 ```
-
-
-
-
 
 <br/><br/>
 

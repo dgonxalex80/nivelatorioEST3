@@ -1,15 +1,11 @@
 ---
-title: <span style="color:#034a94"> **Documentos Rmarkdown**</span>
+title: <span style="color:#034a94"> **Documentos en R**</span>
 author: "Nivelatorio de Estadística"
 output:
   html_document:
     code_folding: hide
     css: style.css
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, comment = NA)
-```
 
 <br/><br/>
 
@@ -73,7 +69,7 @@ knitr::include_graphics("img/Rmd1.png")
 
 <br/>
 
-Se nos depliega una ventana donde podemos colocar el nombre del documento 
+Se depliega una ventana donde podemos colocar el nombre del documento 
 
 <center>
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
@@ -84,7 +80,7 @@ knitr::include_graphics("img/Rmd2.png")
 </center>
 <br/>
 
-En esta ventana se no indica que la salida puede estar en formato y sus respectivos requerimientos:
+En esta ventana se puede seleccionar el formato de la salida deseada en sus respectivos requerimientos:
 
 + HTML 
 + PDF  
@@ -92,10 +88,13 @@ En esta ventana se no indica que la salida puede estar en formato y sus respecti
 
 Ademas de estos documentos existen plantillas que se activan al instalar paquetes como :
 
-* xarimgan que permiote crear presentaciones
-* bookdown para crear libros
+* `xarimgan` para crear presentaciones
+* `bookdown` para crear libros
 
-Es recomendable crear un proyecto al inicio con el fin de que todos los códigos, imágenes y ademas archivos queden asociados a una carpeta de tal forma que estén disponibles cuando se active el proyecto
+
+<br/><br/>
+
+Es recomendable crear un espacio para cada proyectos en su inicio,  con el fin de que todos los códigos, imágenes y ademas archivos queden asociados a una carpeta de tal forma que estén disponibles cuando se active el proyecto. 
 
 <br/>
 
