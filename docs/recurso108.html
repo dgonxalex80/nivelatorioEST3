@@ -260,12 +260,6 @@ $(document).ready(function () {
 <li>
   <a href="recurso108.html">Importar datos</a>
 </li>
-<li>
-  <a href="recurso106.html">Mezclas de bases</a>
-</li>
-<li>
-  <a href="recurso107.html">Manipulación de datos</a>
-</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -293,7 +287,79 @@ $(document).ready(function () {
 </div>
 
 
-
+<p><br/><br/></p>
+<p>La importación de datos es una fase crucial en el proceso de análisis
+de datos en el ámbito de las ciencias de datos. En R, existen varias
+paquetes diseñados para facilitar este proceso ante una variedad de
+fuentes y formatos, como archivos de texto, hojas de cálculo, bases de
+datos, e incluso servicios en línea. La elección del método de
+importación dependerá del formato específico en el que se encuentren los
+datos y de las necesidades particulares del análisis.</p>
+<p><br/></p>
+<p>A continuación se presentan algunas formas de realizar este proceso
+:</p>
+<p><br/></p>
+<ol style="list-style-type: decimal">
+<li>Utilizando el menú RStudio</li>
+</ol>
+<ul>
+<li><p>Caso formato .csv : <em>File /Import Dataset/From
+text</em>.</p></li>
+<li><p>Caso formato .xlsx : <em>File/ Import Dataset/ From
+Excel</em>.</p></li>
+</ul>
+<p><img src="img/importar2.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><br/></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Utilizando el paquete Rcmdr y RcomdrMisc que activa una interfas de
+R que trabaja con menus y ventanas con un proceso parecido al
+anterio</li>
+</ol>
+<p>Los anteriores caso implican que tengamos la base de datos descargada
+en una carpeta de nuestro PC</p>
+<p><br/></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Podemos importar la base de datos de un repositorio que maneje API
+que es un permiso a traves de un token. En este caso debemos solicitar
+el token e instalar el paquete RSocrata</li>
+</ol>
+<p><br/></p>
+<pre>
+install.packages("RSocrata", dependencies = TRUE)   
+library(RSocrata)    
+token <- "zxMsD6eXc0zlEMryRGW87Hwrz"  
+Colombia <- read.socrata("https://www.datos.gov.co/resource/gt2j-8ykr.json", app_token = token) 
+</pre>
+<p><br/></p>
+<p>Este proceso tarde unos minutos pues la base es grande</p>
+<p><br/></p>
+<p>Para guardar el archivo en un PC, es recomendable utilizar el
+formarto RDS que ocupa menos espacio. En este caso se guarda el archivo
+con el nombre de <em>Colombia.RDS</em> en la carpeta <em>data/</em></p>
+<pre>
+saveRDS(Colombia, file = "data/Colombia23.RDS") 
+</pre>
+<p><br/></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Podemos trabajar con Dataset disponible en los paquetes de R. Para
+ello solo utilizamos la función data</li>
+</ol>
+<pre>
+data(iris)  # data set iris
+data(cars)  # data set cars
+</pre>
+<p>Una función que ayuda a escribir la ruta en donde tenemos el archivo
+a importar es la función :`file.choose. Al ejecutarla abre una ventana
+que nos permite localizar el archivo a, para luego copiando la ruta
+obtenida con Ctrl+C, como parámetro de la función adecuada.</p>
+<pre>
+file.choose()
+</pre>
+<p>En mi caso se genera la ruta “data/Colombia.RDS”</p>
+<pre>
+Colombia<- readRDS("data/Colombia23.RDS")
+</pre>
+<p><br/><br/></p>
 
 
 

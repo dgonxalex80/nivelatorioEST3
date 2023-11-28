@@ -260,12 +260,6 @@ $(document).ready(function () {
 <li>
   <a href="recurso108.html">Importar datos</a>
 </li>
-<li>
-  <a href="recurso106.html">Mezclas de bases</a>
-</li>
-<li>
-  <a href="recurso107.html">Manipulación de datos</a>
-</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -294,55 +288,32 @@ de paquetes en R</strong></span></h1>
 
 
 <p><br/><br/></p>
-<div id="instalación-de-paquetes-en-r" class="section level2">
-<h2><span style="color:#034a94"><strong>Instalación de paquetes en
-R</strong></span></h2>
+<p>En R, los paquetes o packages son colecciones de funciones, datos y
+código que se almacenan en una carpeta conforme a una estructura bien
+definida. Los paquetes pueden ser creados por usuarios individuales o
+por grupos de desarrolladores.</p>
 <p><br/></p>
-<p>El lenguaje <strong>R</strong> esta conformado por miles de paquetes
-o <strong>Packages</strong> construidos por investigadores en diversos
-temas y área del conocimiento</p>
-<p>Al instalar <strong>R</strong> se descargan con el programa una serie
-de paquetes para ser utilizados de manera inmediata. A este primer
-conjunto se llama <strong>base</strong> y permite dar respuesta a
-problemas básicos. Sin embargo en algunos casos es necesario instalar
-paquetes adicionales, los cuales iremos anunciando en la medida que sean
-necesario. (<a
-href="https://gallery.shinyapps.io/087-crandash/">paquetes más populares
-CRAN</a>)</p>
-<p>La instalación de paquetes se puede hacer de dos formas :</p>
+<p>Los paquetes se utilizan para extender la funcionalidad de R. Pueden
+proporcionar funciones para realizar tareas específicas, como importar y
+analizar datos, crear gráficos o implementar algoritmos de aprendizaje
+automático.</p>
+<p><br/></p>
+<p>La mayoría de los paquetes de R se almacenan en el sitio web CRAN
+(Comprehensive R Archive Network). CRAN es un repositorio de paquetes de
+R que se someten a un riguroso proceso de revisión antes de ser
+publicados.</p>
 <p><br/><br/></p>
-<div
-id="utilizando-la-ventana-packages-ubicada-en-la-parte-inferior-derecha-de-rstudio"
-class="section level4">
-<h4>1. Utilizando la ventana <strong>Packages</strong> ubicada en la
-parte inferior derecha de RStudio</h4>
-<center>
-<img src="img/install_package1.png" width="60%" style="display: block; margin: auto;" />
-<strong>Figura 3.3</strong> Ventana Packages - instalación de paquetes
-</center>
-<p><br/><br/></p>
-</div>
-<div id="digitando-directamente-en-la-consola-de-r"
-class="section level4">
-<h4>2. Digitando directamente en la consola de R</h4>
-<center>
-<p><img src="img/install1.png" width="50%" style="display: block; margin: auto;" /></p>
-<strong>Figura 3.4</strong> Ventana Terminal - función install.packages
-</center>
-<p><br/><br/></p>
-<div id="desde-un-repositorio-en-github" class="section level5">
-<h5>Desde un repositorio en GitHub</h5>
-<p>Se puede descargar un paquete construido de manera particular y
-almacenado en github utilizando el paquete <code>devtools</code></p>
-<pre class="r"><code>devtools::install_github(&quot;dgonxalex80/paqueteNIV&quot;)</code></pre>
-<p><br/><br/></p>
-</div>
-</div>
-</div>
-<div id="paquetes-algunos-utilizados-en-ciencia-de-datos"
+<div id="algunios-paquetes-utilizados-en-ciencia-de-datos"
 class="section level2">
-<h2><span style="color:#034a94"><strong>Paquetes algunos utilizados en
+<h2><span style="color:#034a94"><strong>Algunios paquetes utilizados en
 Ciencia de Datos</strong></span></h2>
+<p>Existe un gran número de paquetes que ayudan a los cientificos de
+datos a desarrollar diferentes actividades para cada una de las etapas
+que surgen en el manejo de los datos</p>
+<center>
+<img src="img/paquetes_CdeD.png" width="100%" style="display: block; margin: auto;" />
+<strong>Figura 3.3</strong> Etapas de los datos y los paquetes empleados
+</center>
 <p><br/><br/></p>
 <center>
 <p><strong>Tabla 3.3</strong> Paquetes utilizados en Ciencia de Datos
@@ -512,6 +483,51 @@ la sintaxis de las funciones. En el siguiente ejemplo la función
 help(“install.packages”) permite visualizar los parámetros de la
 función</p>
 <pre class="r"><code>help(&quot;sum&quot;)</code></pre>
+<p><br/><br/></p>
+</div>
+<div id="instalación-de-paquetes-en-r" class="section level2">
+<h2><span style="color:#034a94"><strong>Instalación de paquetes en
+R</strong></span></h2>
+<p><br/></p>
+<p>El lenguaje <strong>R</strong> esta conformado por miles de paquetes
+o <strong>Packages</strong> construidos por investigadores en diversos
+temas y área del conocimiento</p>
+<p>Al instalar <strong>R</strong> se descargan con el programa una serie
+de paquetes para ser utilizados de manera inmediata. A este primer
+conjunto se llama <strong>base</strong> y permite dar respuesta a
+problemas básicos. Sin embargo en algunos casos es necesario instalar
+paquetes adicionales, los cuales iremos anunciando en la medida que sean
+necesario. (<a
+href="https://gallery.shinyapps.io/087-crandash/">paquetes más populares
+CRAN</a>)</p>
+<p>La instalación de paquetes se puede hacer de dos formas :</p>
+<p><br/><br/></p>
+<div
+id="utilizando-la-ventana-packages-ubicada-en-la-parte-inferior-derecha-de-rstudio"
+class="section level4">
+<h4>1. Utilizando la ventana <strong>Packages</strong> ubicada en la
+parte inferior derecha de RStudio</h4>
+<center>
+<img src="img/install_package1.png" width="60%" style="display: block; margin: auto;" />
+**Figura 3.4* Ventana Packages - instalación de paquetes
+</center>
+<p><br/><br/></p>
+</div>
+<div id="digitando-directamente-en-la-consola-de-r"
+class="section level4">
+<h4>2. Digitando directamente en la consola de R</h4>
+<center>
+<p><img src="img/install1.png" width="50%" style="display: block; margin: auto;" /></p>
+<strong>Figura 3.5</strong> Ventana Terminal - función install.packages
+</center>
+<p><br/><br/></p>
+<div id="desde-un-repositorio-en-github" class="section level5">
+<h5>Desde un repositorio en GitHub</h5>
+<p>Se puede descargar un paquete construido de manera particular y
+almacenado en github utilizando el paquete <code>devtools</code></p>
+<pre class="r"><code>devtools::install_github(&quot;dgonxalex80/paqueteNIV&quot;)</code></pre>
+</div>
+</div>
 </div>
 
 

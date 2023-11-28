@@ -120,7 +120,7 @@ Estos programas se insertan dentro de la configuración inicial al instalar post
 
 R cuenta con una ventana de ayudas que permite revisar las sintaxis y detalles de sus parámetros, al igual que ejemplos y artículos relacionados con las funciones consultadas
 
-Para ascender a las ayudas se puede consultar directamente en la venta Help (#7 de la imagen) o desde la linea de la Consola:
+Para ascender a las ayudas se puede consultar directamente en la ventana Help (7 de la figura 3.2) o desde la linea de la Consola:
 
 <pre>
 help("lm")
@@ -131,11 +131,11 @@ help("lm")
 ?"lm"
 </pre>
 
-
+<br/><br/>
 
 A manera de introducción a  continuación se relacionan algunas ayudas para la iniciación del lenguaje :
 
-<br/><br/><br/>
+<br/><br/>
 
 
 
@@ -282,11 +282,11 @@ Para construir una función utilizamos la palabra `function`, entre paréntesis 
 
 
 $$f(x)=\dfrac{1}{(x-1)^{2}}$$
-$f(100) = ?$
+$f(4.5) = ?$
 
 ```{r}
 fx=function(x){1/(x-1)^2} # <<-
-fx(100)
+fx(4.5)
 ```
 
 

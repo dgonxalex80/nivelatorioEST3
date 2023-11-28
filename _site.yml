@@ -13,8 +13,5 @@ navbar:
       href: recurso104.html
     - text: "Importar datos"
       href: recurso108.html        
-    - text: "Mezclas de bases"
-      href: recurso106.html      
-    - text: "Manipulación de datos"
-      href: recurso107.html      
+   
 
