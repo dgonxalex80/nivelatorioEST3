@@ -62,7 +62,7 @@ En caso de presentar error al reinstalar paqueteNIV adicione el parametro : `for
 
 <br/><br/>
 
-Despues de la ejecución del código debe aparecer una página como la que se muestra en la siguiente figura 
+Después de la ejecución del código debe aparecer una página como la que se muestra en la siguiente figura 
 
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
