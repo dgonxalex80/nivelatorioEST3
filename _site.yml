@@ -5,6 +5,8 @@ output_dir: "docs"
 navbar:
   title: "Introducción"
   left:
+    - text: "Tipo de objetos"
+      href: recurso101.html  
     - text: "Paquetes"
       href: recurso102.html
     - text: "Documentos"

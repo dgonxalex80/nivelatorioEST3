@@ -1,5 +1,5 @@
 ---
-title: <span style="color:#034a94"> **Introducción a R**</span>
+title: <span style="color:#034a94"> **Tipo de objetos en R**</span>
 author: "Nivelatorio de Estadística"
 output:
   html_document:
@@ -7,229 +7,226 @@ output:
     css: style.css
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-<br/><br/>
-
-```{r, echo=FALSE, out.width="10%", fig.align = "left"}
-knitr::include_graphics("img/logoR.png")
-```
-
-
-<br/><br/>
-
-# **Que es R** 
-
 <br/>
 
-Es un lenguaje para la computación  estadística, utilizado para el procesamiento de información y generación de modelos estadísticos. 
+<br/><br/>
 
-Entre las principales caractarísticas  estan:
+A manera de introducción a  continuación se relacionan algunas ayudas para la iniciación del lenguaje :
 
-   + Licencia (GNU GPL)  abierta y gratis
-   
-   + Creciente popularidad en ciencia de datos
-
-   + Multipalataforma (Linux, Windows, MacOS)
-
-   + Ross Ihaka y Robert Gentieman (U.Auckland - Nueva Zelanda) 1993
-
-   + Lenguaje multiparadigma
-   
-   + Codigo construido en C y Fortran
-   
-   + Gran comunidad muy activa 
-   
-   + Mas de 7000 paquetes 
-   
 <br/><br/>
 
 
 
-```{r, echo=FALSE, out.width="70%", fig.align = "center"}
-knitr::include_graphics("img/Rt.png")
-```
+<center>
+**Tabla 3.1**  Tipos de objetos 
 
-<br/><br/><br/>
+| Objeto      | tipos                                          | permite varios tipos? |
+|:------------|:-----------------------------------------------|:----------------------|
+|  vector     | numéricos, caracter, complejo, lógico          | No                    |
+|  factor     | numérico, caracter                             | No                    |
+|  arreglo    | numéricos, caracter, complejo, lógico          | No                    |
+|  matriz     | numéricos, caracter, complejo, lógico          | No                    |
+|  data.frame | numéricos, caracter, complejo, lógico          | Si                    |
+|  ts         | numéricos, caracter, complejo, lógico          | Si                    |
+|  lista      | numéricos, caracter, complejo, lógico, función, expresión  | Si        |
 
-# ¿Qué es RStudio?
-
-```{r, echo=FALSE, out.width="20%", fig.align = "left"}
-knitr::include_graphics("img/logoRStudio.png")
-```
-
-Esta interfaz o IDE que integra un conjunto de herramientas y ventanas  que facilitan el trabajo con R a sus usuarios 
-
-Esta conformada por varias ventana como se muestra en la siguiente imagen:
-
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/VRStudio.png")
-```
-
-1. Fuente (Source) : Ventana donde se trabajan los script  con código que se guardan para posterior utilización
-2. Consola (Console) : Ventana donde se pueden escribir comandos de manera directa
-3. Ambiente (Environment) : Ventana donde se pueden observar las varables y objetos creados
-4. Archivos (Files) : Ventana que muestra el directorio y los archivos en el que estamos trabajando
-5. Graficos (plots) : Ventana que presenta los gráficos construidos
-6. Paquetes (Packages) : Ventana que permite instalar los paquetes requeridos
-7. Ayudas (Help) : Ventana en la que podemos pedir ayuda sobre las sintaxis de funciones
-
-En los siguientes enlaces se pueden descargar los programas para su instalación :
-
-+ [R download](https://cran.r-project.org/)
-
-+ [RStudio download](https://rstudio.com/products/rstudio/download/)
-
-<br/>
+<sub>
+Tomado de: [R para principiantes](https://bookdown.org/jboscomendoza/r-principiantes4/) 
+</sub>
+</center>
 
 
-A manera de instroducción a  continuación se relacionan algunas ayudas para la iniciación del lenguaje :
-
-<br/><br/><br/>
-
-# **Tipos de datos en R**
 
 <br/><br/>
 
-### **vector**  
+A continuación se presentan algunos ejemplos de objetos
 
-Arreglo unidimensional de valores, caracteres o cadenas
+<br/><br/>
 
-```{r tidy=FALSE, eval=TRUE}
-x=c(1,2,3,4,5)         #<<
+## <span style="color:#034A94">**vector**</span>  
+
+Arreglo unidimensional de valores, caracteres o cadenas, todos del mismo tipo
+
+
+### <span style="color:#FF7F00">**Ejemplo**</span>
+
+
+```{r}
+x=c(1,2,3,4,5)  
 x
 ```
 
 
-```{r tidy=FALSE, eval=TRUE}
-y=c("Muy regular", "Regular", "Bueno", "Muy bueno", "Excelente")
+
+
+```{r}
+y=c("Muy regular", "Regular", "Bueno", "Muy bueno", "Excelente")    
 y
 ```
 
+
 <br/><br/>
 
-### **matriz** 
+## <span style="color:#034a94">**matriz**</span> 
 
 Arreglo bidimensional de valores
 
-```{r tidy=FALSE}
+
+```{r}
 x=1:9
-m=matrix(x,nrow=3)   #<<
+
+m=matrix(x,nrow=3)   # <<-
 m
 ```
+
+
+
 <br/><br/>
 
-### **arrays**  
+## <span style="color:#034a94">**arrays**</span>  
 
 Arreglos multimensionales de valores. 
-En el siguiente ejemplo se representa un arreglo de 3 matrices 3x3 que conformarian en 3D un cubo de datos
+En el siguiente ejemplo se representa un arreglo de 3 matrices 3x3 que conformarían en 3D un cubo de datos
 
-```{r tidy=FALSE}
+
+```{r}
 x=1:9
 y=10:18
 z=19:27
-mn=array(c(x,y),dim=c(3,3,3)) #<<
+
+mn=array(c(x,y),dim=c(3,3,3)) # <<-
 mn
 ```
+
+
 <br/><br/>
 
-### **factores** 
+## <span style="color:#034a94">**factores**</span> 
 
 Vector de variables categóricas, por lo general se utilizan para dividir una base en subgrupos  
 
-```{r tidy=FALSE, eval=TRUE}
+
+```{r}
 x=c("rojo", "verde", "azul")
 y=rep(x, times=4)
-x
+y=as.factor(y)               # <<-
 y
-
 ```
 
 <br/><br/>
 
-### **listas** 
+## <span style="color:#034a94">**listas**</span> 
 
 Colección de objetos cada uno de tipos diferentes. El objeto de esta clase guarda valores en diferentes formatos. 
 
 En el siguiente ejemplo se construye un objeto **h** que contiene varios elementos dentro de si, todos relacionados con un histograma
 
-```{r tidy=FALSE, eval=FALSE}
-h=hist(rnorm(100,25,10)) #<<
-h$breaks
-h$counts
-h$density
-h$mids
-h$xname
-h$equidist
+
+
+```{r}
+h=hist(rnorm(100,45,5), col = "#FF7F00", main = "Distribución del tiempo de carrera K10", las=1, xlab = "tiempo en min", ylab ="frecuencia") 
 ```
+
+
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "left"}
+knitr::include_graphics("img/lista.png")
+```
+
+
 <br/><br/>
 
-### **data.frames**
+## <span style="color:#034a94">**data.frames**</span>
 
-Estructura de datos de dos dimensiones - filas y columnas - base de datos. En este caso se puede obtener un fila (data[1,] o una columna (data[,1], por separado o un elemento de la data directamente data[20,2].
+Estructura de datos de dos dimensiones - filas y columnas - base de datos. con la función `data()` se pueden cargar bases de datos contenidas en R.  `data(iris)` carga la base iris que contiene 150 registros (colomnas) y 5 variables (filas). 
 
-```{r tidy=FALSE, eval=FALSE}
-data(iris) #<<
-head(iris)
-iris[1,]
-iris[1,5]
-
+```{r}
+data(iris) # carga la data desde un paquete activado
+head(iris) # presenta los primeros 6 registros
 ```
+
+
+
 <br/><br/>
 
-### **funciones**
+## <span style="color:#034a94">**funciones**</span>
 
-Para construir una función utilizamos la palabra *function*, entre parentesis los valores de entrada y entre corchetes la formula que conforma la función. Por ejemplo:
+Para construir una función utilizamos la palabra `function`, entre paréntesis los valores de entrada y entre corchetes la formula que conforma la función. Por ejemplo:
 
-$$f(x)=\dfrac{1}{(x-1)^{2}} $$
 
-```{r }
-fx=function(x){1/(x-1)^2} #<<
-fx(100) # funcion evaluada en x=100
+$$f(x)=\dfrac{1}{(x-1)^{2}}$$
+$f(4.5) = ?$
+
+```{r}
+fx=function(x){1/(x-1)^2} # <<-
+fx(4.5)
 ```
+
+
+<br/>
 
 En este caso la función es evaluada dentro de un otra función en la construcción de un gráfico
 
-```{r }
-x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
-plot(x, fx(x), type="l", col="red") # genera grafica
-```
+<br/>
 
-El siguiente ejemplo construye una función para la realización de un gráfico. En este caso los valores de entrada estan conformados por un vector de datos y un color
 
 ```{r}
-y=sample(1:6,100, replace = T)  # generacion de datos
-# funcion definida para la construccion de graficos
+fx=function(x){1/(x-1)^2} 
+x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
+plot(x, fx(x), type="l", col="#FF7F00", lwd = 2, las=1) # genera grafica
+```
+
+El siguiente ejemplo construye una función para la realización de un gráfico. En este caso los valores de entrada están conformados por un vector de datos y un color
+
+
+<pre>
+# funcion definida para la construcción de gráficos
 grafica=function(x,color){
-        barplot(x,
-                col=color, las=1)
-        grid()
-}
+              barplot(x,col=color, las=1)
+              }
+</pre>
+
+
+```{r, fig.width=8, fig.height=4}
+
+# funcion definida para la construcción de gráficos
+grafica=function(x,color){
+	            barplot(x,col=color, las=1)
+              }
+
+y=sample(1:6,100, replace = T)  # generacion de datos
 
 z=table(y) # generacion de tabla de datos
-grafica(z,"red")  # evalua la funcion en los datos z y colo rojo
+par(mfrow = c(1, 2)) # arma una matrix 1X2 de graficos
+grafica(z,"#034A94")  # evalúa la función en los datos z y colo rojo
+grafica(z,"#0EB0C6")
 ```
-
-
-```{r}
-w=round(prop.table(z)*100,2)  # genera datos y constuye tabla en porcentaje
-grafica(w,"#6495ED")  # evalua la funcion con w y color azul
-```
-
-
-[R CHARTS: colores en R](https://r-charts.com/es/colores/)
 
 <br/><br/>
 
-### **ts**
+## <span style="color:#034a94">**ts**</span>
 
-Objeto para series de tiempo
+Los objetos `ts` corresponde a series temporales que están compuestos por un inicio, un final y una periodicidad temporal regular
+
+
+```{r tidy=FALSE}
+x=round(rnorm(285, 20,3),1) # datos sumulados
+temperatura=ts(x,freq=12,start=c(2000,1))  # <<-
+temperatura
+```
+
 
 <br/><br/><br/>
 
-##  **Operadores en R**
+
+
+#  <span style="color:#034a94">**Operadores en R**</span>
+
+<br/>
+
+<center>
+**Tabla 3.2**  Operadores lógicos
 
 |      |Aritméticos         |      | Comparativos       |        | Lógicos     |
 |:----:|:-------------------|:----:|:-------------------|:------:|:------------|
@@ -241,4 +238,133 @@ Objeto para series de tiempo
 |  %%  | módulo             | !=   | diferente de       |        |             |
 |  %/% | división enteros   |      |                    |        |             |
 
+<sub>
+Tomado de : [R para principiantes](https://bookdown.org/jboscomendoza/r-principiantes4/)
+</sub>
+</center>
 
+<br/><br/><br/>
+
+#  <span style="color:#034a94">**Algunas funciones útilies**</span>
+
+<br/>
+
+###  <span style="color:#034a94">**rep()**</span>
+
+<pre>
+rep(x,                # objeto a replicar 
+    times = 1,        # número de veces que ser replica objeto
+    length.out = NA,  # repetir el objeto las veces necesarias para crear vector de esta longitud
+    each = 1)         # número de veces que se replica elementos individiales del objeto
+
+</pre>
+
+<br/>
+
+### <span style="color:#FF7F00"> **Ejemplos**</span>
+
+```{r}
+vector= c("uno", "dos", "tres")
+rep(vector, times=4)
+```
+ 
+
+
+<br/>
+
+
+
+```{r}
+vector= c("uno", "dos", "tres")
+rep(vector, each=4)
+```
+
+
+<br/>
+
+
+```{r}
+vector= c("uno", "dos", "tres")
+rep(vector, times=4,  length.out=7)
+```
+
+<br/><br/><br/>
+
+###  <span style="color:#034A94">**seq()**</span>
+
+<pre>
+seq(from=0,             # valor inicial  
+    to=10,               # valor final
+    by=0.5,               # valor incremento
+    length.out=NULL,    # longitud del secuencia   
+    along.with=NULL)    # longitd del vector
+</pre>
+
+
+
+<br/>
+
+### <span style="color:#FF7F00"> **Ejemplos**</span>
+
+Secuencia de números enteros del 1 al 20
+
+```{r}
+seq(20)    # equivalente a 1:20
+1:20
+```
+
+<br/>
+
+
+Secuencia de números pares entre el 1 y el 20
+
+```{r}
+seq(2,20,2)
+```
+
+
+<br/>
+
+Secuencia de números del 0 al 1 con incrementos de 0.1
+```{r}
+seq(0, 1, 0.1)
+```
+
+
+<br/><br/><br/>
+
+###  <span style="color:#034a94">**round()**</span>
+
+<pre>
+round(x,             # valor  
+      digits = 0)    # nmero de digitos
+</pre>
+
+<br/>
+
+### <span style="color:#FF7F00"> **Ejemplos**</span>
+
+Aprimar el valor de $\pi$ a 3 decimales
+
+```{r}
+pi
+round(pi,3)    # aproxima a 3 decimales
+```
+
+
+
+<br/><br/><br/>
+
+###  <span style="color:#034a94">**trunc()**</span>
+
+Entrega la parte entera de un número
+
+<br/>
+
+### <span style="color:#FF7F00"> **Ejemplo**</span>
+
+Sacar la parte entera de $\pi$
+
+```{r}
+trunc(pi)
+```

@@ -51,6 +51,27 @@ knitr::include_graphics("img/rmarkdown_universe.jpg")
 
 <br/><br/>
 
+Para iniciar es necesario la instalación de los siguientes paquetes de R
+
+
+```{r, eval=FALSE}
+install.packages("rmarkdown")
+install.packages("bookdown")
+install.packages("xaringan")
+install.packages("blogdown")
+```
+
+
+
+* **rmarkdown**
+* **bookdown**
+* **xaringam**
+* **blogdwn**
+
+<br/><br/>
+
+
+
 ## <span style="color:#034a94">**Formato Rmd**</span>
 
 Para asceder a una plantilla Rmd ingresamos por :
@@ -93,6 +114,10 @@ Ademas de estos documentos existen plantillas que se activan al instalar paquete
 
 
 <br/><br/>
+
+## <span style="color:#034a94">**Creación de proyectos**</span>
+
+<br/>
 
 Es recomendable crear un espacio para cada proyectos en su inicio,  con el fin de que todos los códigos, imágenes y ademas archivos queden asociados a una carpeta de tal forma que estén disponibles cuando se active el proyecto. 
 
@@ -192,14 +217,11 @@ knitr::include_graphics("img/libro2.png")
 </center>
 
 
-<br/><br/>
-
-Los cambios que se generen en los archivos de la plantilla quedarán realizados en el libro
-
 
 
 <br/><br/>
 
-<center>
-[<img src="img/BigBook.png" alt="Big Book">](https://www.bigbookofr.com/index.html)
-</center>
+## <span style="color:#034a94">**Referencia**</span>
+
+* [**R Markdown : The Definitive Guide**](https://bookdown.org/yihui/rmarkdown/)
+
